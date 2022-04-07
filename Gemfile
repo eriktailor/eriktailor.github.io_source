@@ -8,4 +8,5 @@ gem 'jekyll-autoprefixer', '1.0.1'
 gem 'jekyll-minifier'
 gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
+gem 'jekyll-webp'
 gem "webrick", "~> 1.7"

@@ -48,6 +48,10 @@ jekyll-minifier:
 imageoptim:
     svgo: false
 
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
 # Plugins
 plugins:
     - jekyll-sitemap
@@ -55,8 +59,6 @@ plugins:
     - jekyll-minifier
     - jekyll-seo-tag
     - jekyll-paginate
+    - jekyll-webp
 
 port: 4001
-
-paginate: 5
-paginate_path: "/blog/page:num/"
