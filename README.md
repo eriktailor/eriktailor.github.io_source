@@ -51,6 +51,7 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Add code highlighting
 -   404 page wrong place footer
+-   Redirect to thank you page after form submit
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -143,3 +144,4 @@ find . -name "*.webp" -type f -delete
 -   Add `jekyll-tagging` plugin
 -   Added a lightbox for post images
 -   Style single tag on single post pages
+-   Contact form PHP script added

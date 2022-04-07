@@ -33,11 +33,6 @@ jQuery(document).ready(function ($) {
 		})
 		.attr("target", "_blank");
 
-	// Redirect to thank you page after contact form submit
-	$(document).on("submit", "#contact-form", function () {
-		window.location.href = "https://eriktailor.github.io/thank-you.html";
-	});
-
 	// Create a lightbox for post images
 	$(function () {
 		var lightbox = $("#lightbox");
