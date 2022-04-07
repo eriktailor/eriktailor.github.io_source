@@ -9,4 +9,5 @@ gem 'jekyll-minifier'
 gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
 gem 'jekyll-webp'
+gem 'jekyll-tagging'
 gem "webrick", "~> 1.7"

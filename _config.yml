@@ -60,6 +60,12 @@ webp:
     img_dir: ["/assets/img/"]
     nested: true
 
+# Tags
+tag_page_layout: tagpage
+tag_page_dir: tag
+tag_page_data:
+    sitemap: false
+
 # Plugins
 plugins:
     - jekyll-sitemap

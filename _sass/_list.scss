@@ -73,26 +73,20 @@ ul {
 }
 
 // Tags list
-.tags-list {
-	list-style: none;
-	li {
-		padding: 0;
-		text-indent: 0;
+.tag-cloud {
+	a {
+		background-color: $primary;
+		border-radius: 3px;
+		margin: 0 4px 6px 0;
 		display: inline-block;
-		a {
-			background-color: $primary;
-			border-radius: 3px;
-			margin: 0 4px 6px 0;
-			display: inline-block;
-			padding: 0 10px;
-			font-size: 16px;
-			text-transform: lowercase;
-			color: $white;
-			text-decoration: none;
-			transition: background-color 0.25s;
-			&:hover {
-				background: darken($primary, 5%);
-			}
+		padding: 0 10px;
+		font-size: 16px;
+		text-transform: lowercase;
+		color: $white;
+		text-decoration: none;
+		transition: background-color 0.25s;
+		&:hover {
+			background: darken($primary, 5%);
 		}
 	}
 }

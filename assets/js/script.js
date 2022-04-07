@@ -38,5 +38,8 @@ jQuery(document).ready(function ($) {
 		window.location.href = "https://eriktailor.github.io/thank-you.html";
 	});
 
+	// Create a lightbox for post images
+	$("img").click(function () {});
+
 	// ---------------------------------------------------
 });

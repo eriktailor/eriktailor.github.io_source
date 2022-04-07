@@ -26,7 +26,7 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
 <!------------------------------------------------------------------------------------------------------------->
 
-# Generate webp files
+# Generate webp files with cwebp
 
 Navigate exactly in the directory where your images are located and execute this:
 
@@ -45,27 +45,6 @@ find . -name "*.webp" -type f -delete
 
 <!------------------------------------------------------------------------------------------------------------->
 
-# Add tag
-
-1. Create a new file TAGNAME.md in the `/tag` folder
-2. Add the following content same as others, but replace the tag name with your TAGNAME
-
-<!------------------------------------------------------------------------------------------------------------->
-
-# Push to github
-
-This is the code for pushing only the content of the `_site/` folder to GH pages
-
-```
-cd _site
-git init
-git add .
-git commit -m "commit text"
-git push -u origin master
-```
-
-<!------------------------------------------------------------------------------------------------------------->
-
 # Todos
 
 -   Html output formatting
@@ -73,7 +52,6 @@ git push -u origin master
 -   Add code highlighting
 -   404 page wrong place footer
 -   Add a lightbox for images
--   Add `jekyll-tagging` plugin
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -163,3 +141,4 @@ git push -u origin master
 -   Remove `base.html` from includes
 -   New posts added
 -   New tag page created
+-   Add `jekyll-tagging` plugin
