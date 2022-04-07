@@ -1,0 +1,36 @@
+// Rotating hand on front page
+.rotate {
+	animation: wave 4s infinite;
+	display: inline-block;
+	font-size: 45px;
+	position: relative;
+	top: -5px;
+	margin-right: 5px;
+	@media (max-width: $breakpoint-xs) {
+		display: none;
+	}
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	5% {
+		transform: rotate(-10deg);
+	}
+	10% {
+		transform: rotate(12deg);
+	}
+	15% {
+		transform: rotate(-10deg);
+	}
+	20% {
+		transform: rotate(9deg);
+	}
+	25% {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}

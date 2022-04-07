@@ -1,0 +1,15 @@
+<div class="pagination">
+	{% if paginator.previous_page %}
+	  <a class="btn prev" href="{{ paginator.previous_page_path }}">
+        {% include components/arrow-prev.html %} Prev page
+	  </a>
+	{% endif %}
+	<span class="page_number ">
+	  Page: {{ paginator.page }} of {{ paginator.total_pages }}
+	</span>
+	{% if paginator.next_page %}
+    <a class="btn next" href="{{ paginator.next_page_path }}">
+        Next page {% include components/arrow-next.html %}
+    </a>
+	{% endif %}
+</div>

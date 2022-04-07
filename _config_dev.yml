@@ -1,0 +1,76 @@
+# Project basics
+title: ErikTailor
+tagline: My personal blog website
+description: This is my personal blog website
+author: ErikTailor
+logo: /assets/img/eriktailor_logo_dark.webp
+locale: hu
+baseurl: ""
+url: ""
+
+# -----------------------------------------------------
+
+# Defaults
+defaults:
+    - scope:
+          type: posts
+          path: _posts
+      values:
+          is_post: true
+          layout: post
+          permalink: /blog/:title/
+    - scope:
+          type: pages
+          path: _pages
+      values:
+          is_post: false
+          layout: default
+
+# Exclude files
+exclude:
+    - CHANGELOG.md
+    - LICENSE.txt
+    - README.md
+    - Gemfile
+    - Gemfile.lock
+    - .DS_Store
+    - .jekyll-cache
+
+# Include files
+include: [_pages]
+
+# Livereload
+livereload: true
+
+# Sass
+sass:
+    sourcemap: never
+    style: expanded
+
+# Autoprefixer
+autoprefixer:
+    browsers:
+        - last 2 versions
+
+# Minifier
+jekyll-minifier:
+    exclude: ["sitemap.xml"]
+    preserve_php: true
+    remove_intertag_spaces: true
+
+# Image optim
+imageoptim:
+    svgo: false
+
+# Plugins
+plugins:
+    - jekyll-sitemap
+    - jekyll-autoprefixer
+    - jekyll-minifier
+    - jekyll-seo-tag
+    - jekyll-paginate
+
+port: 4001
+
+paginate: 5
+paginate_path: "/blog/page:num/"

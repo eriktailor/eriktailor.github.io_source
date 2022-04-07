@@ -1,0 +1,46 @@
+---
+layout: default
+permalink: /
+---
+
+<h1>
+	Hello, I'm Erikkkkkkkkkkkkkk.
+	<div class="rotate">👋</div>
+</h1>
+
+<p>I'm a designer and web developer located in Hungary. I like to craft unique projects, either in print, graphic and UI design or frontend and WordPress development. This blog is mostly for myself, to remember the useful stuff I recently learned, but if you like my approach, feel free to contact me.</p>
+
+{% include components/button.html url="blog.html" label="Get in touch with me" %}
+
+<hr />
+
+<h2 id="latest-articles">Latest Articles</h2>
+
+<ul class="article-list mb-3">
+	{% for post in site.posts limit:5 %}
+	<li>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+		<time>{{ post.date | date: "%b %d" }}</time>
+	</li>
+	{% endfor %}
+</ul>
+
+{% include components/button.html url="blog/" label="See more articles in blog" %}
+
+<hr />
+
+<h2 class="mb-4" id="technologies">Technology</h2>
+
+<div class="tech-list">
+	{% for item in site.data.technologies %}
+	<a href="{{ item.link }}" target="_blank">
+		<img src="assets/img/technologies/{{ item.image }}" alt="{{ item.title }}" />
+	</a>
+	{% endfor %}
+</div>
+
+<hr />
+
+<h2 id="tags">Tags</h2>
+
+{% include components/tagcloud.html %}

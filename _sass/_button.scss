@@ -1,0 +1,27 @@
+button {
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn {
+	background-color: $primary;
+	padding: 15px 25px;
+	color: $white;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 1.4;
+	&:hover {
+		background: darken($primary, 5%);
+	}
+	@media (max-width: $breakpoint-xs) {
+		display: block;
+		text-align: center;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}

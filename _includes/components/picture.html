@@ -1,0 +1,7 @@
+{% assign img = include.img %}
+
+<picture>
+	<source type="image/webp" srcset="/assets/img/posts/{{ img }}.webp">
+	<source type="image/jpeg" srcset="/assets/img/posts/{{ img }}">
+	<img src="/assets/img/posts/{{ img }}" alt="{{ include.alt }}" class="{{ include.class }}">
+</picture>

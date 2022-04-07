@@ -1,0 +1,12 @@
+<header>
+	<div class="container">
+		<a class="site-brand" href="/">
+			<img src="/assets/img/eriktailor_logo_dark.png" />
+		</a>
+		<nav>
+			{% for item in site.data.navigation %}
+			<a href="{{ item.url }}">{{ item.text }}</a>
+			{% endfor %}
+		</nav>
+	</div>
+</header>

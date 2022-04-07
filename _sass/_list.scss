@@ -1,0 +1,92 @@
+// Ordered list
+ol {
+	list-style: none;
+	counter-reset: my-awesome-counter;
+	li {
+		counter-increment: my-awesome-counter;
+		padding-left: 35px;
+		text-align: left;
+		text-indent: -30px;
+		&:before {
+			content: counter(my-awesome-counter) ". ";
+			font-weight: bold;
+			margin-right: 10px;
+		}
+	}
+}
+
+// Unordered list
+ul {
+	list-style: inside;
+	li {
+		padding-left: 30px;
+		text-indent: -25px;
+	}
+}
+
+// Articles list
+.article-list {
+	li {
+		display: flex;
+		justify-content: space-between;
+		padding: 0;
+		text-indent: 0;
+		margin-bottom: 10px;
+	}
+	time {
+		font-size: 16px;
+		opacity: 0.3;
+		@media (max-width: $breakpoint-xs) {
+			display: none;
+		}
+	}
+}
+
+// Technologies list
+.tech-list {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto;
+	gap: 30px;
+	img {
+		transition: transform 0.2s ease-in-out;
+		transform-origin: bottom;
+		margin-bottom: 0;
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+	@media (max-width: $breakpoint-sm) {
+		grid-template-columns: auto auto auto auto auto auto;
+	}
+	@media (max-width: $breakpoint-xs) {
+		grid-template-columns: auto auto auto auto;
+	}
+	@media (max-width: $breakpoint-xxs) {
+		gap: 20px;
+	}
+}
+
+// Tags list
+.tags-list {
+	list-style: none;
+	li {
+		padding: 0;
+		text-indent: 0;
+		display: inline-block;
+		a {
+			background-color: $primary;
+			border-radius: 3px;
+			margin: 0 4px 6px 0;
+			display: inline-block;
+			padding: 0 10px;
+			font-size: 16px;
+			text-transform: lowercase;
+			color: $white;
+			text-decoration: none;
+			transition: background-color 0.25s;
+			&:hover {
+				background: darken($primary, 5%);
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+// Pagination
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+	.btn {
+		margin: 0;
+		svg {
+			width: 20px;
+			height: auto;
+			position: relative;
+			top: 4px;
+		}
+		&.older {
+			svg {
+				left: -3px;
+			}
+		}
+		&.newer {
+			svg {
+				right: -3px;
+			}
+		}
+	}
+	.page_number {
+		opacity: 0.3;
+	}
+}

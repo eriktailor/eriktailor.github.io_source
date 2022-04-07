@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<h1 class="page-title">{{ page.title }}</h1>
+
+{% capture source %}{{ page.title | replace: ' ', '-' | downcase | append: '.jpg' }}{% endcapture %} 
+
+{% capture title %}{{ page.title }}{% endcapture %}
+
+{% if page.image != false %}
+	{% include components/picture.html img=source alt=title class="mb-4" %}
+{% endif %}
+
+{% if page.description %}
+<p>{{ page.description }}</p>
+{% endif %}
+
+<hr />
+
+{{ content }}
+
+<hr />
+
+<h3 id="tags">Tags</h3>
+
+<ul class="tags-list">
+	{% for tag in page.tags %}
+		{% capture tag_name %}{{ tag }}{% endcapture %}
+		<li><a href="/tag/{{ tag_name }}">{{ tag }}</a></li>
+	{% endfor %}
+</ul>
