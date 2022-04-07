@@ -46,3 +46,17 @@ permalink: /
 <h2 id="tags">Tags</h2>
 
 {% include components/tagcloud.html %}
+
+
+<form method="post" name="contact_form" action="https://eriktailor.hu/jekyll_contact.php">
+    Your Name:
+    <input type="text" name="name">
+
+    Email Address:
+    <input type="text" name="email">
+
+    Message:
+    <textarea name="message"></textarea>
+
+    <input type="submit" value="Submit">
+</form>	
