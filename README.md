@@ -52,7 +52,7 @@ find . -name "*.webp" -type f -delete
 -   Add code highlighting
 -   404 page wrong place footer
 -   Style and order simple jekyll search plugin
--   Add date to search results
+-   Posts add languages to ``` syntaxes
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -151,3 +151,5 @@ find . -name "*.webp" -type f -delete
 ### v1.2.1
 
 -   Page loader added
+-   Date added to search results
+-   Rouge highlighter added

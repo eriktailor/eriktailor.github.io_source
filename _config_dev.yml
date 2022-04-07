@@ -11,6 +11,12 @@ port: 4001
 
 # -----------------------------------------------------
 
+markdown: kramdown
+
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
 # Defaults
 defaults:
     - scope:

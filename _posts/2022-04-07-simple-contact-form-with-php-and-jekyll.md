@@ -40,20 +40,18 @@ If you decided to create your own form with mailing function, keep going on this
 
 We will use a pretty basic `html` form with a name, email and message fields:
 
-```other
+```html
 <form action="" method="post">
-
 	<label for="name">Name:</label>
-	<input type="text" id="name" name="name">
+	<input type="text" id="name" name="name" />
 
 	<label for="email">Email:</label>
-	<input type="text" id="email" name="email">
+	<input type="text" id="email" name="email" />
 
 	<label for="message">Message:</label>
 	<textarea id="message" name="message"></textarea>
 
 	<button type="submit">Submit</button>
-
 </form>
 ```
 
@@ -65,14 +63,15 @@ Just leave the `action` attribute empty, we will get on this later. You can also
 
 I know that `css` is not relevant in this case, but I felt that there's a need for a minimum styling:
 
-```other
+```css
 label {
 	display: block;
 	width: 100%;
 	margin-bottom: 5px;
 }
 
-input, textarea {
+input,
+textarea {
 	margin-bottom: 15px;
 	width: 200px;
 	padding: 10px;
@@ -91,7 +90,7 @@ button {
 
 Let's create the `php` script what will use to send messages through the form:
 
-```other
+```php
 <?php
 
 // Your email address below
