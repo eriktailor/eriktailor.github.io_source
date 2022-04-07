@@ -23,9 +23,9 @@ layout: default
 
 <h3 id="tags">Tags</h3>
 
-<ul class="tags-list">
+<div class="tag-cloud">
 	{% for tag in page.tags %}
 		{% capture tag_name %}{{ tag }}{% endcapture %}
-		<li><a href="/tag/{{ tag_name }}">{{ tag }}</a></li>
+		<a href="/tag/{{ tag_name }}">{{ tag }}</a>
 	{% endfor %}
-</ul>
+</div>
