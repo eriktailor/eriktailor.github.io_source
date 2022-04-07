@@ -49,11 +49,12 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
-	// Simple jekyll search field
+	// Simple jekyll search
 	SimpleJekyllSearch({
 		searchInput: document.getElementById("search-input"),
 		resultsContainer: document.getElementById("results-container"),
 		json: "/search.json",
+		noResultsText: "No result found!",
 	});
 
 	// ---------------------------------------------------

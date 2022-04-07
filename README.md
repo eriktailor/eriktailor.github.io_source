@@ -52,6 +52,7 @@ find . -name "*.webp" -type f -delete
 -   Add code highlighting
 -   404 page wrong place footer
 -   Style and order simple jekyll search plugin
+-   Add date to search results
 
 <!------------------------------------------------------------------------------------------------------------->
 
