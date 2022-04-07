@@ -73,6 +73,7 @@ git push -u origin master
 -   Add code highlighting
 -   404 page wrong place footer
 -   Add a lightbox for images
+-   Add `jekyll-tagging` plugin
 
 <!------------------------------------------------------------------------------------------------------------->
 
