@@ -161,3 +161,4 @@ git push -u origin master
 -   Add `jekyll-webp` plugin
 -   Remove `base.html` from includes
 -   New posts added
+-   New tag page created
