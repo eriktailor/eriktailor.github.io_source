@@ -73,7 +73,6 @@ git push -u origin master
 -   Add code highlighting
 -   404 page wrong place footer
 -   Add a lightbox for images
--   Remove `base.html` from includess
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -160,3 +159,4 @@ git push -u origin master
 ### v1.2.0
 
 -   Add `jekyll-webp` plugin
+-   Remove `base.html` from includes
