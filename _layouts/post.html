@@ -8,7 +8,7 @@ layout: default
 {% capture title %}{{ page.title }}{% endcapture %}
 
 {% if page.image != false %}
-	{% include components/picture.html img=source alt=title class="mb-4" %}
+	{% include components/picture.html img=source alt=title class="mb-4 featured-image" %}
 {% endif %}
 
 {% if page.description %}
