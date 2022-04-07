@@ -62,7 +62,7 @@ git push -u origin master
 
 > > Note that you will need [SSH](https://en.wikipedia.org/wiki/Secure_Shell) connection to GitHub to be able to use `git@github.com`. There is a great tutorial from Karl Broman about the [first steps](https://kbroman.org/github_tutorial/pages/first_time.html) of using git includes how to create your SSH key.
 
-Now if you check [https://github.com/username/username.github.io_source](https://github.com/eriktailor/eriktailor.github.io_source), your will see that your local build files has been added to the repository.
+Now if you check the github repository, your will see that your local build files has been added to the repository.
 
 Run `jekyll build` in the Terminal to generate the output files.
 

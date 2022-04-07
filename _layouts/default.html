@@ -26,7 +26,8 @@
 
 		{% seo %}
 	</head>
-	<body>
+	<body {% if page.layout == 'post' %}class="single-post"{% endif %}>
+		
 		{% include partials/header.html %}
 
 		<main>

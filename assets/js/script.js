@@ -39,7 +39,20 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Create a lightbox for post images
-	$("img").click(function () {});
+	$(function () {
+		var lightbox = $("#lightbox");
+		lightbox.hide();
+		$(".single-post img").click(function () {
+			var src = $(this).attr("src");
+			$("body").addClass("lightbox-opened");
+			lightbox.fadeIn().css("display", "flex");
+			lightbox.find("img").attr("src", src);
+		});
+		$("#lightbox .close").click(function () {
+			lightbox.fadeOut();
+			$("body").removeClass("lightbox-opened");
+		});
+	});
 
 	// ---------------------------------------------------
 });

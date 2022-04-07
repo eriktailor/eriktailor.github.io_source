@@ -51,7 +51,7 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Add code highlighting
 -   404 page wrong place footer
--   Add a lightbox for images
+-   Style single tag on single post pages
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -142,3 +142,4 @@ find . -name "*.webp" -type f -delete
 -   New posts added
 -   New tag page created
 -   Add `jekyll-tagging` plugin
+-   Added a lightbox for post images
