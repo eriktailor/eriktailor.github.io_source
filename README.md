@@ -73,6 +73,7 @@ git push -u origin master
 -   Add code highlighting
 -   404 page wrong place footer
 -   Add a lightbox for images
+-   Add `jekyll-webp` plugin
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -155,3 +156,5 @@ git push -u origin master
 ### v1.1.3
 
 -   New posts added
+
+### v1.2.0
