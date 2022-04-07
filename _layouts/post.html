@@ -4,8 +4,7 @@ layout: default
 
 <h1 class="page-title">{{ page.title }}</h1>
 
-{% capture source %}{{ page.title | replace: ' ', '-' | downcase | append: '.jpg' }}{% endcapture %} 
-
+{% capture source %}{{ page.title | replace: ' ', '-' | downcase }}{% endcapture %} 
 {% capture title %}{{ page.title }}{% endcapture %}
 
 {% if page.image != false %}
