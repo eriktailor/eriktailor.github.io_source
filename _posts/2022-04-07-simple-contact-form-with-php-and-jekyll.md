@@ -2,7 +2,6 @@
 layout: post
 title: Simple contact form with PHP and Jekyll
 description: In this tutorial I will show you how to create a simple working contact form with pure Jekyll and PHP for free, without using a third-party service.
-image: false
 tags: github jekyll php html css
 ---
 
