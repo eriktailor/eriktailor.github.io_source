@@ -147,3 +147,7 @@ find . -name "*.webp" -type f -delete
 -   Style single tag on single post pages
 -   Contact form PHP script added
 -   Redirect to `thank-you.html` page after form submit
+
+### v1.2.1
+
+-   Page loader added

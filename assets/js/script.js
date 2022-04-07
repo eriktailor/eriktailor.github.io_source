@@ -56,6 +56,7 @@ jQuery(document).ready(function ($) {
 		json: "/search.json",
 		noResultsText: "<h3>No result found!</h3>",
 		searchResultTemplate: '<li><a href="{url}">{title}</a><time>{date}</time></li>',
+		limit: 10,
 	});
 
 	// ---------------------------------------------------
