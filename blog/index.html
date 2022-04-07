@@ -3,17 +3,15 @@ layout: default
 title: Blog
 ---
 
-<h1>Blog.</h1>
+<h1>{{ page.title }}.</h1>
 
-<!-- Html Elements for Search -->
-<div class="mb-3" id="search-container">
-	<input class="mb-2" type="text" id="search-input" placeholder="Search...">
+<!-- Search -->
+<div class="mb-2" id="search-container">
+	<input class="mb-2" type="text" id="search-input" placeholder="Search in posts...">
 	<ul class="article-list" id="results-container"></ul>
 </div>
 	
-	
-
-
+<!-- Posts -->
 {% for post in paginator.posts %}
 
 	<div class="article-preview">
@@ -40,5 +38,5 @@ title: Blog
 
 {% endfor %}
 
-<!-- Pagination links -->
+<!-- Pagination -->
 {% include components/pagination.html %}

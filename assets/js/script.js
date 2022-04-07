@@ -54,7 +54,8 @@ jQuery(document).ready(function ($) {
 		searchInput: document.getElementById("search-input"),
 		resultsContainer: document.getElementById("results-container"),
 		json: "/search.json",
-		noResultsText: "No result found!",
+		noResultsText: "<h3>No result found!</h3>",
+		searchResultTemplate: '<li><a href="{url}">{title}</a><time>{date}</time></li>',
 	});
 
 	// ---------------------------------------------------

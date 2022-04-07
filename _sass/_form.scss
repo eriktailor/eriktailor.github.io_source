@@ -42,8 +42,8 @@ select {
 	transition: all 0.5s;
 	box-shadow: 0;
 	&:focus {
-		border-color: rgba($black, 0.6);
-		box-shadow: inset 0px 0px 0px 1px rgba($black, 0.6);
+		border-color: $primary;
+		box-shadow: inset 0px 0px 0px 1px $primary;
 	}
 }
 
