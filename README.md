@@ -51,6 +51,7 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Add code highlighting
 -   404 page wrong place footer
+-   Style and order simple jekyll search plugin
 
 <!------------------------------------------------------------------------------------------------------------->
 

@@ -49,5 +49,12 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	// Simple jekyll search field
+	SimpleJekyllSearch({
+		searchInput: document.getElementById("search-input"),
+		resultsContainer: document.getElementById("results-container"),
+		json: "/search.json",
+	});
+
 	// ---------------------------------------------------
 });

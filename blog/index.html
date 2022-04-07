@@ -5,6 +5,15 @@ title: Blog
 
 <h1>Blog.</h1>
 
+<!-- Html Elements for Search -->
+<div id="search-container">
+	<input type="text" id="search-input" placeholder="search...">
+	<ul id="results-container"></ul>
+	</div>
+	
+	
+
+
 {% for post in paginator.posts %}
 
 	<div class="article-preview">
