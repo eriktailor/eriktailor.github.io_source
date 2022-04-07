@@ -49,9 +49,7 @@ find . -name "*.webp" -type f -delete
 
 -   Html output formatting
 -   Add comments feature with GitHub Issues API
--   Add code highlighting
 -   404 page wrong place footer
--   Style and order simple jekyll search plugin
 -   Posts add languages to ``` syntaxes
 
 <!------------------------------------------------------------------------------------------------------------->
@@ -153,3 +151,4 @@ find . -name "*.webp" -type f -delete
 -   Page loader added
 -   Date added to search results
 -   Rouge highlighter added
+-   Jekyll search styled
