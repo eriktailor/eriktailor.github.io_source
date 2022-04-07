@@ -1,7 +1,26 @@
-{% assign img = include.img %}
+{% assign img = include.img | replace: ".jpg", ".webp" | replace: ".jpeg", ".webp" | replace: ".png", ".webp" | replace: ".tiff", ".webp" %}
 
 <picture>
 	<source type="image/webp" srcset="/assets/img/posts/{{ img }}.webp">
-	<source type="image/jpeg" srcset="/assets/img/posts/{{ img }}">
-	<img src="/assets/img/posts/{{ img }}" alt="{{ include.alt }}" class="{{ include.class }}">
+	<source type="image/jpeg" srcset="/assets/img/posts/{{ img }}.jpg">
+	<img src="/assets/img/posts/{{ img }}.jpg" alt="{{ include.alt }}" class="{{ include.class }}">
 </picture>
+
+
+
+
+
+{% assign webp_filename = include.url | replace: ".jpg", ".webp" | replace: ".jpeg", ".webp" | replace: ".png", ".webp" | replace: ".tiff", ".webp" %}
+
+{% comment %}
+{% assign webp_filename = include.url | replace: ".jpg", ".webp" | replace: ".jpeg", ".webp" | replace: ".png", ".webp" | replace: ".tiff", ".webp" %}
+
+
+<picture>
+    <source srcset="assets/img/posts/{{ webp_filename }}" type="image/webp">
+    <img src="assets/img/posts/{{ include.url }}" alt="{{ include.alt }}">
+</picture>
+{% endcomment %}
+
+
+

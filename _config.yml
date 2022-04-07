@@ -7,6 +7,7 @@ logo: /assets/img/eriktailor_logo_dark.webp
 locale: hu
 baseurl: "/"
 url: "eriktailor.github.io"
+port: 4001
 
 # -----------------------------------------------------
 
@@ -52,6 +53,13 @@ imageoptim:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
+# WebP Generation
+webp:
+    enabled: true
+    quality: 80
+    img_dir: ["/assets/img/"]
+    nested: true
+
 # Plugins
 plugins:
     - jekyll-sitemap
@@ -60,5 +68,3 @@ plugins:
     - jekyll-seo-tag
     - jekyll-paginate
     - jekyll-webp
-
-port: 4001
