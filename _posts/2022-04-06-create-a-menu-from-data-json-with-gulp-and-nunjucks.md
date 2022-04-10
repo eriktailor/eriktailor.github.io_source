@@ -4,6 +4,7 @@ title: Create a menu from data.json with Gulp & Nunjucks
 description: In this tutorial I will show you how to include a data.json file in Gulp, and call variables used in Nunjucks template files.
 image: false
 tags: gulp html
+comments: true
 ---
 
 ## Create

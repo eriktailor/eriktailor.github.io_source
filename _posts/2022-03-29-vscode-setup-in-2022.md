@@ -3,6 +3,7 @@ layout: post
 title: VSCode Setup in 2022
 description: In this tutorial I will show you how to set up VSCode like my personal preferences.
 tags: vscode
+comments: true
 ---
 
 ## Reset to defaults

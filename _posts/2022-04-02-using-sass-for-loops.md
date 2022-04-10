@@ -4,6 +4,7 @@ title: Using Sass for loops
 description: In this tutorial I will show you how to use the built-in @for function of Sass to batch create helper classes.
 image: using-sass-for-loops.jpg
 tags: sass css
+comments: true
 ---
 
 ## Scss

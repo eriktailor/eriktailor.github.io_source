@@ -3,6 +3,7 @@ layout: post
 title: Custom html list with styled numbers
 description: In this tutorial I will show you how to create html ordered lists with custom styled numbering.
 tags: html css
+comments: true
 ---
 
 ## Html

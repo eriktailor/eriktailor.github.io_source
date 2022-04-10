@@ -3,6 +3,7 @@ layout: post
 title: Simple contact form with PHP and Jekyll
 description: In this tutorial I will show you how to create a simple working contact form with pure Jekyll and PHP for free, without using a third-party service.
 tags: github jekyll php html css
+comments: true
 ---
 
 I'm a big fan of Jekyll, and when I was creating my [contact page](https://eriktailor.github.io/contact.html), I wanted to have a simple contact form what sends me an email each time when the form is submitted. I was searching around the internet for a basic solution, and I only found third-party (premium) based solutions only, like the ones listed in the [Jekyll contact forms](https://jekyllthemes.io/resources/jekyll-contact-forms) page.

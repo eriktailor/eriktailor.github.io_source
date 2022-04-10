@@ -3,6 +3,7 @@ layout: post
 title: Mac move dock to other screen
 description: In this tutorial I will show you how to move the dock to the other screen you are using, on Mac.
 tags: mac
+comments: true
 ---
 
 While working with two screens at the same time, I noticed a really annoying issue what I couldn't get rid of: sometimes my dock moves to the other, secondary screen I use for coding only.

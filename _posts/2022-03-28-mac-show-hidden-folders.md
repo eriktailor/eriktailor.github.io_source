@@ -3,6 +3,7 @@ layout: post
 title: Mac show hidden folders
 description: In this tutorial I will show you how to show and hide folders on a Mac.
 tags: mac
+comments: true
 ---
 
 Open the terminal and enter the following to reveal hidden folders:

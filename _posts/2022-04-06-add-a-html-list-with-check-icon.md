@@ -3,6 +3,7 @@ layout: post
 title: Add a html list with check icon
 description: In this tutorial I will show you how to create a list with check (or any other) icon as bullets.
 tags: html css
+comments: true
 ---
 
 ## Html

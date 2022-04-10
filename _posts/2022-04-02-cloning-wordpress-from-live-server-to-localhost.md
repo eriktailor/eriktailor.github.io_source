@@ -4,6 +4,7 @@ title: Cloning WordPress from live server to localhost
 description: In this tutorial we will go through how to clone a WordPress site from a live server to localhost (even with large databases).
 image: false
 tags: wordpress
+comments: true
 ---
 
 ## Copy files

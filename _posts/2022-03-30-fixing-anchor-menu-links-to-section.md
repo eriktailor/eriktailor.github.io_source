@@ -3,6 +3,7 @@ layout: post
 title: Fixing anchor menu links to section
 description: This method fixes the scroll difference at the top of the section when using a sticky navbar.
 tags: html css
+comments: true
 ---
 
 ## Html

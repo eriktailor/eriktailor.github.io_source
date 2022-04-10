@@ -3,6 +3,7 @@ layout: post
 title: Use any Jekyll plugins with GitHub Pages
 description: In this tutorial I will show you how to build a workflow with Jekyll and GitHub Pages where you will be able to use any Jekyll plugins.
 tags: github jekyll
+comments: true
 ---
 
 ## The Problem

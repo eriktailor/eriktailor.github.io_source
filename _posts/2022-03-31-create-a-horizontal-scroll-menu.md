@@ -3,6 +3,7 @@ layout: post
 title: Create a horizontal scrolling menu
 description: In this tutorial I will show you how to create a horizontal scrolling navigation menu on mobile.
 tags: html css
+comments: true
 ---
 
 ## Html

@@ -4,6 +4,7 @@ title: Set virtual hosts in MAMP
 description: Here's how I set up MAMP with virtual hosts on my Mac.
 image: false
 tags: mamp
+comments: true
 ---
 
 ## 1. Edit hosts file

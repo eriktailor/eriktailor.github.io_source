@@ -3,6 +3,7 @@ layout: post
 title: Create custom checkboxes and radio buttons
 description: In this tutorial I will show you how to create customized checkboxes and radios instead of the browser's default ones.
 tags: html css sass
+comments: true
 ---
 
 ## Html

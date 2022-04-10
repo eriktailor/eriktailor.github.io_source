@@ -3,6 +3,7 @@ layout: post
 title: Create anchor links from headings
 description: In this tutorial I will show you how to create anchor links in h1-h6 headings, which scrolls to the proper part of the website and adds hashtag id to url.
 tags: javascript sass css
+comments: true
 ---
 
 ## Javascript

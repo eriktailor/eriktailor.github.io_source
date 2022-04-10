@@ -3,6 +3,7 @@ layout: post
 title: Select field colored placeholder
 description: In this tutorial I will show how make colored placeholders for a select input field, without changing the selected color.
 tags: html css javascript
+comments: true
 ---
 
 ## Html

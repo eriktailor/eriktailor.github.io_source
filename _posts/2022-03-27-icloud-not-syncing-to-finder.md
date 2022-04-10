@@ -3,6 +3,7 @@ layout: post
 title: iCloud not syncing to Finder
 description: Sometimes the iCloud syncing on a Mac stuck without a reason. In this tutorial, I will show you how to get iCloud sync to Mac working again.
 tags: mac
+comments: true
 ---
 
 ## Solution

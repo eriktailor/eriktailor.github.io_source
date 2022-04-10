@@ -3,6 +3,7 @@ layout: post
 title: Create a Jekyll button variable
 description: In this tutorial I will explain how to create inline variables in Jekyll.
 tags: jekyll html
+comments: true
 ---
 
 ## Create

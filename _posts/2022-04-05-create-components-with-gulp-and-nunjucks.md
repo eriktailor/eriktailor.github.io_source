@@ -4,6 +4,7 @@ title: Create components with Gulp & Nunjucks
 description: In this tutorial I will show you how to create a repeatable blockquote component template in Gulp.js using Nunjucks html modulizer.
 image: false
 tags: gulp html
+comments: true
 ---
 
 ## Create

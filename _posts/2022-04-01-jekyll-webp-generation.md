@@ -3,6 +3,7 @@ layout: post
 title: Jekyll webp generation
 description: In this tutorial I will show how to automatically generate webp files from jekyll image assets and include them to the html with a shortcode.
 tags: jekyll html
+comments: true
 ---
 
 ## Install Plugin
