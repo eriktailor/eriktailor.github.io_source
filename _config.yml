@@ -73,7 +73,7 @@ tag_page_data:
     sitemap: false
 
 # Staticman
-staticman_url: https://eriktailor-staticman.herokuapp.com/v3/entry/github/eriktailor/eriktailor.github.io/master/comments
+staticman_url: https://eriktailor-staticman.herokuapp.com/v3/entry/github/eriktailor/eriktailor.github.io_source/master/comments
 
 # Plugins
 plugins:
