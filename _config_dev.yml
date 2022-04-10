@@ -94,3 +94,4 @@ plugins:
     - jekyll-seo-tag
     - jekyll-paginate
     - jekyll-webp
+    - "jekyll_version_plugin"
