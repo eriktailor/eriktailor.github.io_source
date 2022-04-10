@@ -18,7 +18,7 @@ Source: [TaniaRascia](https://www.taniarascia.com/make-a-static-website-with-jek
 
 # Run locally
 
-To run the project in local environment, use this command:
+To run the project in local environment, use this commandd:
 
 ```
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
