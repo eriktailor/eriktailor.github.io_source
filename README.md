@@ -47,7 +47,7 @@ find . -name "*.webp" -type f -delete
 
 # Todos
 
--   Html output formatting
+-   Html output formatting (minifying?)
 -   Add comments feature with GitHub Issues API
 
 <!------------------------------------------------------------------------------------------------------------->
