@@ -160,3 +160,4 @@ find . -name "*.webp" -type f -delete
 -   Posts add ``` rouge syntaxes
 -   Style inline code attributes
 -   Change html code highlighting color
+-   Disqus comments function added
