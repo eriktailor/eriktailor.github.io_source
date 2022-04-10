@@ -86,6 +86,9 @@ tag_page_dir: tag
 tag_page_data:
     sitemap: false
 
+# Staticman
+staticman_url: https://eriktailor-staticman.herokuapp.com/v3/entry/github/eriktailor/eriktailor.github.io/master/comments
+
 # Plugins
 plugins:
     - jekyll-sitemap

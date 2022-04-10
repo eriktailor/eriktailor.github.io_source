@@ -37,3 +37,9 @@ layout: default
 {% if page.comments %}
 	{% include components/comments.html %}
 {% endif %} 
+
+<hr>
+
+{% include comments.html %}
+
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
