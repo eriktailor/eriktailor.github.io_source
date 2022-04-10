@@ -49,7 +49,6 @@ find . -name "*.webp" -type f -delete
 
 -   Html output formatting
 -   Add comments feature with GitHub Issues API
--   Change code highlighting, (it's too bright)
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -160,3 +159,4 @@ find . -name "*.webp" -type f -delete
 -   404 page wrong footer position fixed
 -   Posts add ``` rouge syntaxes
 -   Style inline code attributes
+-   Change html code highlighting color
