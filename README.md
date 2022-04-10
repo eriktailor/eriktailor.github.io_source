@@ -49,7 +49,6 @@ find . -name "*.webp" -type f -delete
 
 -   Html output formatting
 -   Add comments feature with GitHub Issues API
--   404 page wrong place footer
 -   Change code highlighting, (it's too bright)
 -   Style inline code attributes
 -   Posts add languages to ``` syntaxes
@@ -160,3 +159,4 @@ find . -name "*.webp" -type f -delete
 -   New posts added
 -   Add max height to code blocks
 -   Search script only loads on blog page fix
+-   404 page wrong footer position fixed

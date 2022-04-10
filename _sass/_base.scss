@@ -1,20 +1,35 @@
 // Site basics
 body {
-	background-color: $bgcolor;
-	@media (max-width: $breakpoint-xxs) {
-		font-size: 16px;
-	}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: $bgcolor;
+    @media (max-width: $breakpoint-xxs) {
+        font-size: 16px;
+    }
 }
 
 .container {
-	max-width: 600px;
-	width: 100%;
-	margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 // Helper classes
 @for $i from 0 through 5 {
-	.mb-#{$i} {
-		margin-bottom: $i * 10px !important;
-	}
+    .mb-#{$i} {
+        margin-bottom: $i * 10px !important;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden-sm {
+    @media (max-width: $breakpoint-sm) {
+        display: none;
+    }
 }

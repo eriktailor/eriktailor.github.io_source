@@ -1,91 +1,65 @@
 // Form styles
 .form-row {
-	display: flex;
-	.form-group {
-		&:first-child {
-			padding-right: 10px;
-		}
-		&:last-child {
-			padding-left: 10px;
-		}
-	}
-	@media (max-width: $breakpoint-sm) {
-		flex-wrap: wrap;
-		.form-group {
-			padding: 0 !important;
-		}
-	}
+    display: flex;
+    .form-group {
+        &:first-child {
+            padding-right: 10px;
+        }
+        &:last-child {
+            padding-left: 10px;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        flex-wrap: wrap;
+        .form-group {
+            padding: 0 !important;
+        }
+    }
 }
 
 .form-group {
-	width: 100%;
-	margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 label {
-	display: none;
-	font-size: 16px;
+    display: none;
+    font-size: 16px;
 }
 
 input,
 textarea,
 select {
-	width: 100%;
-	padding: 15px 20px;
-	border-radius: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.25);
-	box-sizing: border-box;
-	font-family: inherit;
-	font-weight: bold;
-	font-size: 16px;
-	outline: none;
-	transition: all 0.5s;
-	box-shadow: 0;
-	&:focus {
-		border-color: $primary;
-		box-shadow: inset 0px 0px 0px 1px $primary;
-	}
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.5s;
+    box-shadow: 0;
+    &:focus {
+        border-color: $primary;
+        box-shadow: inset 0px 0px 0px 1px $primary;
+    }
 }
 
 textarea {
-	margin-bottom: -10px;
+    margin-bottom: -10px;
 }
 
 input[type="submit"],
 button[type="submit"] {
-	border: 0;
-	cursor: pointer;
-	border: 0;
-	box-shadow: 0;
+    border: 0;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0;
 }
 
 ::placeholder {
-	color: rgba($black, 0.3);
-	font-weight: normal;
-}
-
-// Thank you page
-.thank-you {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	height: 100vh;
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 30px;
-	text-align: center;
-	z-index: 0;
-	.check-icon {
-		margin: 0 auto 40px;
-		display: block;
-	}
-	p {
-		br {
-			@media (max-width: $breakpoint-xs) {
-				display: none;
-			}
-		}
-	}
+    color: rgba($black, 0.3);
+    font-weight: normal;
 }
