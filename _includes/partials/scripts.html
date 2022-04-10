@@ -2,5 +2,18 @@
 <script src="/assets/js/loader.js"></script>
 <script src="/assets/js/copycode.js"></script>
 <script src="/assets/js/tooltip.js"></script>
+{% if page.title == 'Blog' %}
 <script src="/assets/js/search.js"></script>
+<script>
+    // Simple jekyll search
+	SimpleJekyllSearch({
+		searchInput: document.getElementById("search-input"),
+		resultsContainer: document.getElementById("results-container"),
+		json: "/search.json",
+		noResultsText: "<h3>No result found!</h3>",
+		searchResultTemplate: '<li><a href="{url}">{title}</a><time>{date}</time></li>',
+		limit: 10,
+	});
+</script>
+{% endif %}
 <script src="/assets/js/script.js"></script>
