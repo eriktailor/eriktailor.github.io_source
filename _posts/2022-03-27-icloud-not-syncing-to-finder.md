@@ -9,13 +9,13 @@ tags: mac
 
 Open Terminal and type:
 
-```other
+```shell
 killall bird
 ```
 
 If this not fix the issue, go back to Terminal and type:
 
-```other
+```shell
 cd ~/Library/Application Support
 rm -rf CloudDocs
 ```

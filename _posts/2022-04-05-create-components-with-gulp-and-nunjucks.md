@@ -12,9 +12,9 @@ Let's create our template file called `quote.njk`, which will contain the markup
 
 {% raw %}
 
-```other
+```html
 {% macro params(content) %}
-    <blockquote>{{ content }}</blockquote>
+<blockquote>{{ content }}</blockquote>
 {% endmacro %}
 ```
 
@@ -28,7 +28,7 @@ Import out newly created file in the `layouts.njk` template:
 
 {% raw %}
 
-```other
+```html
 {% import "partials/quote.njk" as quote %}
 ```
 
@@ -42,7 +42,7 @@ Use it in `.njk` template files around your project, like this:
 
 {% raw %}
 
-```other
+```html
 {{ quote.params('This is the blockquote sample text') }}
 ```
 

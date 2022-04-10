@@ -42,16 +42,16 @@ We will use a pretty basic `html` form with a name, email and message fields:
 
 ```html
 <form action="" method="post">
-	<label for="name">Name:</label>
-	<input type="text" id="name" name="name" />
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" />
 
-	<label for="email">Email:</label>
-	<input type="text" id="email" name="email" />
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" />
 
-	<label for="message">Message:</label>
-	<textarea id="message" name="message"></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
 
-	<button type="submit">Submit</button>
+    <button type="submit">Submit</button>
 </form>
 ```
 
@@ -65,22 +65,22 @@ I know that `css` is not relevant in this case, but I felt that there's a need f
 
 ```css
 label {
-	display: block;
-	width: 100%;
-	margin-bottom: 5px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 input,
 textarea {
-	margin-bottom: 15px;
-	width: 200px;
-	padding: 10px;
+    margin-bottom: 15px;
+    width: 200px;
+    padding: 10px;
 }
 
 button {
-	display: block;
-	padding: 10px 15px;
-	cursor: pointer;
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 ```
 
@@ -129,8 +129,8 @@ header('Location: /thank-you.html');
 3. Grab the `url` where you can access the script, eg: `http://yoursite.com/mailer.php`
 4. Insert this link into the `action` attribute of the html form:
 
-```other
-<form action="http://yoursite.com/mailer.php" method="post">
+```html
+<form action="http://yoursite.com/mailer.php" method="post"></form>
 ```
 
 > > **Note:** this is the most basic mailer script can be used, probably you will need to add a client or server side form validation on the fields to work correctly on a regular basis.

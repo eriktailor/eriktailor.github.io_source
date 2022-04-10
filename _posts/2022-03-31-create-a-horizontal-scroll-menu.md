@@ -9,7 +9,7 @@ tags: html css
 
 This is the html structure of the menu:
 
-```other
+```html
 <nav class="horizontal-menu">
     <ul>
         <li><a href="#">First Item</a></li>
@@ -32,7 +32,7 @@ This is the html structure of the menu:
 
 Add this to the stylesheet:
 
-```other
+```css
 .horizontal-menu {
     overflow: auto;
     white-space: nowrap;

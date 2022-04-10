@@ -7,13 +7,13 @@ tags: mac
 
 Open the terminal and enter the following to reveal hidden folders:
 
-```other
+```shell
 defaults write com.apple.Finder AppleShowAllFiles true
 ```
 
 Then relaunch Finder with:
 
-```other
+```shell
 killall Finder
 ```
 

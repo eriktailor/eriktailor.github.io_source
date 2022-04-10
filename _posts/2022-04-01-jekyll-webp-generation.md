@@ -9,13 +9,13 @@ tags: jekyll html
 
 Go to the project root folder and install with:
 
-```other
+```shell
 gem install jekyll-webp
 ```
 
 Add to the `Gemfile` as a plugin:
 
-```other
+```shell
 group :jekyll_plugins do
   gem 'jekyll-webp'
 end
@@ -23,7 +23,7 @@ end
 
 Add in the `_config.yml` file:
 
-```other
+```shell
 # Site configuration for the WebP Generator Plugin
 
 # The values here represent the defaults if nothing is set
@@ -61,7 +61,7 @@ webp:
 
 To start the generation:
 
-```other
+```shell
 bundle exec jekyll serve
 ```
 
@@ -73,7 +73,7 @@ Create a new file in the \_includes folder:
 
 {% raw %}
 
-```other
+```shell
 touch _includes/picture.html
 ```
 
@@ -83,23 +83,21 @@ Add the following code to the file:
 
 {% raw %}
 
-```other
+```html
 {% assign webp_filename = include.url | replace: ".jpg", ".webp" | replace: ".jpeg", ".webp" | replace: ".png", ".webp" | replace: ".tiff", ".webp" %}
 
 <figure>
+    <picture>
+        <!-- Use the webp file -->
+        <source srcset="assets/img/{{ webp_filename }}" type="image/webp" />
 
-  <picture>
+        <!-- Fallback to the file you added -->
+        <img src="assets/img/{{ include.url }}" alt="{{ include.alt }}" />
+    </picture>
 
-    <!-- Use the webp file -->
-    <source srcset="assets/img/{{ webp_filename }}" type="image/webp">
-
-    <!-- Fallback to the file you added -->
-    <img src="assets/img/{{ include.url }}" alt="{{ include.alt }}">
-
-  </picture>
-
-  {% if include.caption%}<figcaption>{{ include.caption }}</figcaption>{% endif %}
-
+    {% if include.caption%}
+    <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
 </figure>
 ```
 
@@ -109,7 +107,7 @@ Use it in the html files like this:
 
 {% raw %}
 
-```other
+```html
 {% include picture.html url="link-to-image.png" alt="Image alt text" caption="Image caption" %}
 ```
 

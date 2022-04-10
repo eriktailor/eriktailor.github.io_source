@@ -11,7 +11,7 @@ In the `/_includes` folder, create a file named `button.html` with this content:
 
 {% raw %}
 
-```other
+```html
 <a href="{{ include.url }}" class="btn btn-primary">{{ include.label }}</a>
 ```
 
@@ -25,7 +25,7 @@ Use it around the projekt like this:
 
 {% raw %}
 
-```other
+```html
 {% include button.html label="Button Text" url="https://444.hu" %}
 ```
 

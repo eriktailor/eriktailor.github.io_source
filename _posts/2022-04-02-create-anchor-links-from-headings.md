@@ -9,25 +9,25 @@ tags: javascript sass css
 
 First you need to create an unique id for each heading, based on it's text:
 
-```other
+```javascript
 // Create id-s from heading text
-$('h1, h2, h3, h4, h5, h6').each(function(){
-	var str = $(this).text();
-	str = str.replace(/\s+/g, '-').toLowerCase();
-	$(this).attr('id', str);
+$("h1, h2, h3, h4, h5, h6").each(function () {
+    var str = $(this).text();
+    str = str.replace(/\s+/g, "-").toLowerCase();
+    $(this).attr("id", str);
 });
 ```
 
 Then, you have to add a link chain icon to each heading:
 
-```other
+```javascript
 // Add link icon to headings
-$('h2, h3, h4, h5, h6').prepend('<a class="anchor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="19" height="19" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>');
+$("h2, h3, h4, h5, h6").prepend('<a class="anchor"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="19" height="19" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>');
 ```
 
 This will create the following `html` output:
 
-```other
+```html
 <h2 id="heading-title">
 	<a class="anchor">
 		<svg chain icon>
@@ -38,10 +38,10 @@ This will create the following `html` output:
 
 Add a hashtag to the url with the id of the clicked link icon's parent heading:
 
-```other
+```javascript
 // Add a hashtag with the heading id to the url
-$('.anchor').click(function(e){
-	window.location.hash = $(this).parent().attr("id");
+$(".anchor").click(function (e) {
+    window.location.hash = $(this).parent().attr("id");
     e.preventDefault();
 });
 ```

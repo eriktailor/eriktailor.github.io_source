@@ -10,7 +10,7 @@ tags: gulp html
 
 Create a `data.json` file in the root of your src folder:
 
-```other
+```javascript
 {
     "menus": [
         {
@@ -31,13 +31,13 @@ Create a `data.json` file in the root of your src folder:
 
 Install the `gulp-data` package:
 
-```other
+```shell
 npm install gulp-data --save-dev
 ```
 
 Import it in the `gulpfile.js` file:
 
-```other
+```shell
 const data = require('gulp-data');
 ```
 
@@ -47,7 +47,7 @@ const data = require('gulp-data');
 
 Include the `data.json` file in the html rendering function:
 
-```other
+```javascript
 .pipe(data(function() {
   return require('./src/data.json')
 }))
@@ -55,18 +55,17 @@ Include the `data.json` file in the html rendering function:
 
 So for example, here is a complete html rendering function example:
 
-```other
+```javascript
 function renderHtml() {
-    return src([
-        './src/html/pages/*.+(html|njk)',
-        '!src/html'
-    ])
-        .pipe(data(function () {
-            return require('./src/data.json')
-        }))
-        .pipe(njk({ path: ['src/html'], }))
+    return src(["./src/html/pages/*.+(html|njk)", "!src/html"])
+        .pipe(
+            data(function () {
+                return require("./src/data.json");
+            })
+        )
+        .pipe(njk({ path: ["src/html"] }))
         .pipe(beautify.html({ indent_size: 4, preserve_newlines: false }))
-        .pipe(dest(paths.html.dest))
+        .pipe(dest(paths.html.dest));
 }
 ```
 
@@ -76,13 +75,17 @@ function renderHtml() {
 
 Finally, let’s add some markup to `index.nunjucks` so it uses the data we’ve added:
 
-```other
+{% raw %}
+
+```html
 <nav>
-	{% for item in menus %}
-			<a href="{{ item.link }}">{{ item.title }}</a>
-	{% endfor %}
+    {% for item in menus %}
+    <a href="{{ item.link }}">{{ item.title }}</a>
+    {% endfor %}
 </nav>
 ```
+
+{% endraw %}
 
 ---
 

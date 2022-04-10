@@ -21,10 +21,10 @@ Add this style to the hidden anchor div:
 
 ```css
 .anchor {
-	display: block;
-	position: relative;
-	top: -150px;
-	visibility: hidden;
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
 }
 ```
 

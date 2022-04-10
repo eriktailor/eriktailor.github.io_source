@@ -55,7 +55,7 @@ Now you have a local git repository containing your **source** files. Let's add 
 
 Now go back to the Terminal, and type the following:
 
-```other
+```shell
 git remote add origin git@github.com:username/username.github.io_source
 git push -u origin master
 ```
@@ -84,7 +84,7 @@ To setup the **output** repository, we will repeat almost the same steps as we d
 
 Go back to the Terminal and type the following:
 
-```other
+```shell
 git remote add origin git@github.com:username/username.github.io
 git push -u origin master
 ```
@@ -115,7 +115,7 @@ As you see, your **source** repository has been added to the sidebar. Do the sam
 
 It's time to see what we did until now! Open your project folder in your preferred code editor (I use [VSCode](https://code.visualstudio.com/)) and some sample code to your `index.markdown` (or any other) file:
 
-```other
+```markdown
 ---
 layout: default
 ---

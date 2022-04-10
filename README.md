@@ -51,7 +51,6 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Change code highlighting, (it's too bright)
 -   Style inline code attributes
--   Posts add languages to ``` syntaxes
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -160,3 +159,4 @@ find . -name "*.webp" -type f -delete
 -   Add max height to code blocks
 -   Search script only loads on blog page fix
 -   404 page wrong footer position fixed
+-   Posts add ``` rouge syntaxes

@@ -9,13 +9,13 @@ tags: html css
 
 This is our base html, a plain list:
 
-```other
+```html
 <ul>
-	<li>List item 1</li>
-	<li>List item 2</li>
-	<li>List item 3</li>
-	<li>List item 4</li>
-	<li>List item 5</li>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+    <li>List item 4</li>
+    <li>List item 5</li>
 </ul>
 ```
 
@@ -25,23 +25,23 @@ This is our base html, a plain list:
 
 First we need to remove the default styling of the list:
 
-```other
+```css
 ul {
-	list-style: none;
-	padding: 0;
+    list-style: none;
+    padding: 0;
 }
 ```
 
 Then, add a `:before` element to the list items with the svg icon as a background image:
 
-```other
+```css
 ul li:before {
-	content: "";
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	background: url('https://www.svgrepo.com/show/169312/check-mark.svg');
-	margin-right: 10px
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("https://www.svgrepo.com/show/169312/check-mark.svg");
+    margin-right: 10px;
 }
 ```
 
@@ -51,12 +51,12 @@ The whole block needs to be styled a bit, you will see the problem is you add a 
 
 We want to have the icons nicely aligned to the left side of the list item blocks, and separate the items a little bit. So add this code to fix these:
 
-```other
+```css
 ul li {
-	text-indent: -25px;
-	padding-left: 20px;
-	margin-left: 5px;
-	margin-bottom: 20px;
+    text-indent: -25px;
+    padding-left: 20px;
+    margin-left: 5px;
+    margin-bottom: 20px;
 }
 ```
 

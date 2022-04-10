@@ -12,13 +12,13 @@ The `/etc/hosts` file on your local machine maps custom domain names to the IP a
 
 To edit your hosts file in nano, open your preferred terminal and enter:
 
-```other
+```shell
 sudo nano /etc/hosts
 ```
 
 You'll see something like:
 
-```other
+```shell
 ##
 # Host Database
 #
@@ -30,7 +30,7 @@ You'll see something like:
 
 Don't delete anything, just add new line below the localhost line with your desired host name like:
 
-```other
+```shell
 127.0.0.1       localhost
 127.0.0.1       yoursite.loc
 ```
@@ -47,14 +47,14 @@ Now go to the directory your MAMP install is located in. Mine is at `/Applicatio
 
 Find the Apache config file at `/Applications/MAMP/conf/apache/httpd.conf` and open it in an editor. There's likely a bunch of stuff in here, scroll through and find these lines:
 
-```other
+```shell
 # Virtual hosts
 # Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
 
 All you need to do here is un-comment that second line, so it looks like this:
 
-```other
+```shell
 # Virtual hosts
 Include /Applications/MAMP/conf/apache/extra/httpd-vhosts.conf
 ```
@@ -69,7 +69,7 @@ Next, open the virtual hosts file at `/Applications/MAMP/conf/apache/extra/httpd
 
 There will probably be some comments and a couple of examples of blocks there. Leave the comments or delete as you'd like, then replace the examples with the information below. The second block includes the path to the site you're developing and the local domain name you added in the first step. So your file should look something like this:
 
-```other
+```shell
 NameVirtualHost *:80
 
 <VirtualHost *:80>
@@ -93,7 +93,7 @@ Restart MAMP and head to the domain you added. Your site should be live there!
 >
 > If you run into errors, you may also need to go back to the `httpd.conf` file we edited above and allow SymLink override. Open that file, find the block below, and make sure `AllowOverride` is set to All rather than None. So it should look like this:
 
-```other
+```shell
 <Directory />
     Options Indexes FollowSymLinks
     AllowOverride All

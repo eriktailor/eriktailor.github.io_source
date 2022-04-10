@@ -10,7 +10,7 @@ tags: sass css
 
 An example for creating `margin-bottom` helper classes from 0 to 50px by tens:
 
-```other
+```sass
 @for $i from 0 through 5 {
     .mb-#{$i} {
         margin-bottom: $i * 10px;
@@ -24,28 +24,28 @@ An example for creating `margin-bottom` helper classes from 0 to 50px by tens:
 
 The `css` output of the function above:
 
-```other
+```css
 .mb-0 {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .mb-1 {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .mb-2 {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .mb-3 {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .mb-4 {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .mb-5 {
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 ```

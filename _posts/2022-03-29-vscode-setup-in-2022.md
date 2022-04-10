@@ -41,7 +41,7 @@ tags: vscode
 
 `Cmd` + `Shift` + `P` and search for **settings.json** and add these lines:
 
-```other
+```javascript
 {
     "editor.formatOnSave": true,
     "editor.fontFamily": "Monaco, 'Courier New', monospace",

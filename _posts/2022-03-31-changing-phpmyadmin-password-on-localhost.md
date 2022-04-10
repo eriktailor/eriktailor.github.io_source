@@ -8,12 +8,12 @@ tags: php
 
 Open phpMyAdmin and select the `SQL` tab and type this command:
 
-```other
+```sql
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('your_root_password');
 ```
 
 Change to this line in `config.inc.php` to make phpMyAdmin prompts for your MySQL username and password.
 
-```other
+```sql
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 ```
