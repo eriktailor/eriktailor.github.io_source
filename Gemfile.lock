@@ -54,7 +54,6 @@ GEM
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jekyll-webp (1.0.0)
-    jekyll_version_plugin (2.0.0)
     json (2.6.1)
     json-minify (0.0.3)
       json (> 0)
@@ -99,7 +98,6 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-tagging
   jekyll-webp
-  jekyll_version_plugin
   webrick (~> 1.7)
 
 BUNDLED WITH

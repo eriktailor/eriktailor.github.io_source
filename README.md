@@ -160,4 +160,3 @@ find . -name "*.webp" -type f -delete
 -   New posts added
 -   Add max height to code blocks
 -   Search script only loads on blog page fix
--   Added `jekyll_version_plugin` plugin for versioning

@@ -10,5 +10,4 @@ gem 'jekyll-seo-tag'
 gem 'jekyll-paginate'
 gem 'jekyll-webp'
 gem 'jekyll-tagging'
-gem 'jekyll_version_plugin'
 gem "webrick", "~> 1.7"
