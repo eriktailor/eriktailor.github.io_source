@@ -2,50 +2,10 @@
 
 This is my personal blogging website's source code.
 
-# Deploy to live site
-
-To deploy the content of the `_site` folder to GitHub pages, use these commands:
-
-```shell
-git add .
-git commit -am "Test commit"
-git push -u origin master
-```
-
-<!------------------------------------------------------------------------------------------------------------->
-
-# Build for production
-
-Run the following command to build as production before deploying to GitHub pages
-
-```shell
-JEKYLL_ENV=production jekyll build
-```
-
-<!------------------------------------------------------------------------------------------------------------->
-
-# Using webp files with cwebp
-
-Navigate exactly in the directory where your images are located and execute this:
-
-```shell
-$ for file in assets/img/posts/*
-> do
-> cwebp -q 80 "$file" -o "${file%.png}.webp"
-> done
-```
-
-### Delete all webp files:
-
-```shell
-find . -name "*.webp" -type f -delete
-```
-
 <!------------------------------------------------------------------------------------------------------------->
 
 # Todos
 
--   Javascript minification
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
 
@@ -191,3 +151,46 @@ find . -name "*.webp" -type f -delete
 -   404 page moved to `_pages` folder
 -   Update `jekyll-minifier` to work
 -   Removed html compress layout
+
+<!------------------------------------------------------------------------------------------------------------->
+
+# Tutorials
+
+## Deploy to live site
+
+To deploy the content of the `_site` folder to GitHub pages, use these commands:
+
+```shell
+git add .
+git commit -am "Test commit"
+git push -u origin master
+```
+
+<!------------------------------------------------------------------------------------------------------------->
+
+## Build for production
+
+Run the following command to build as production before deploying to GitHub pages
+
+```shell
+JEKYLL_ENV=production jekyll build
+```
+
+<!------------------------------------------------------------------------------------------------------------->
+
+## Using webp files with cwebp
+
+Navigate exactly in the directory where your images are located and execute this:
+
+```shell
+$ for file in assets/img/posts/*
+> do
+> cwebp -q 80 "$file" -o "${file%.png}.webp"
+> done
+```
+
+To delete all webp files:
+
+```shell
+find . -name "*.webp" -type f -delete
+```
