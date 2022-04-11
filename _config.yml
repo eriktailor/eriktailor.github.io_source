@@ -52,7 +52,7 @@ livereload: true
 # Sass
 sass:
     sourcemap: never
-    style: expanded
+    style: compressed
 
 # Autoprefixer
 autoprefixer:
