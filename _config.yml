@@ -11,12 +11,6 @@ port: 4001
 
 # -----------------------------------------------------
 
-markdown: kramdown
-
-kramdown:
-    input: GFM
-    syntax_highlighter: rouge
-
 # Defaults
 defaults:
     - scope:
@@ -32,6 +26,12 @@ defaults:
       values:
           is_post: false
           layout: default
+
+# Rogue
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
 
 # Exclude files
 exclude:
@@ -73,7 +73,7 @@ imageoptim:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-# WebP Generation
+# WebP generation
 webp:
     enabled: true
     quality: 80
@@ -86,7 +86,7 @@ tag_page_dir: tag
 tag_page_data:
     sitemap: false
 
-# staticman comments configuration
+# Staticman
 staticman_url: https://eriktailor-staticman-app.herokuapp.com/v2/entry/eriktailor/eriktailor.github.io_source/master/comments
 
 # Plugins
