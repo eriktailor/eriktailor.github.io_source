@@ -58,6 +58,7 @@ layout: default
 
 <!-- Comments Form -->
 <h3 id="leave-comment">Leave a comment</h3>
+<p>Comments will appear after moderation.</p>
 <form id="comment-form" method="POST" action="{{ site.staticman_url }}">
 	<input name="options[redirect]" type="hidden" value="https://eriktailor.github.io/thank-you">
 	<input name="options[slug]" type="hidden" value="{{ page.slug }}">
@@ -70,8 +71,7 @@ layout: default
 		</div>
 	</div>
 	<div class="form-group">
-		<textarea name="fields[message]" rows="10" placeholder="Comment"></textarea>
+		<textarea name="fields[message]" rows="8" placeholder="Comment"></textarea>
 	</div>
-	<small>Comments will appear after moderation.</small>
-	<button class="btn" type="submit">Send comment</button>
+	<button class="btn" type="submit">Submit comment</button>
 </form>
