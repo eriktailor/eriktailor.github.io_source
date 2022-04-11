@@ -1,0 +1,1 @@
+function preventDefault(e){e.preventDefault()}document.body.addEventListener("touchmove",preventDefault,{passive:!1}),window.addEventListener("load",function(){$("#loader").fadeOut(700),document.body.removeEventListener("touchmove",preventDefault,{passive:!1})});
