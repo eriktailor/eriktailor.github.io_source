@@ -52,7 +52,6 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Create border-radius sass variable
 -   Create info tooltip on comment form
--   Remove lightbox from comment avatars
 -   Add check svg (or redirect to thank you) to comment response output
 -   Add recaptcha to comment form
 
@@ -180,3 +179,4 @@ find . -name "*.webp" -type f -delete
 -   Deleted sample comments
 -   Change order of tags & comments
 -   Put comment included to partials folder
+-   Remove lightbox from comment avatars
