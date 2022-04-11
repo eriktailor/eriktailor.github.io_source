@@ -50,6 +50,7 @@ find . -name "*.webp" -type f -delete
 
 -   Html output formatting
 -   Add recaptcha to comment form
+-   Change reply-to text to icon in comments
 
 <!------------------------------------------------------------------------------------------------------------->
 
