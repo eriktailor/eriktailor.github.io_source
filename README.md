@@ -1,10 +1,10 @@
 # eriktailor-jekyll
 
-This is my personal blog website.
+This is my personal blogging website's source code.
 
 # Deploy to live site
 
-To deploy the project to GitHub pages, use these commands:
+To deploy the content of the `_site` folder to GitHub pages, use these commands:
 
 ```shell
 git add .
@@ -14,20 +14,17 @@ git push -u origin master
 
 <!------------------------------------------------------------------------------------------------------------->
 
-Source: [TaniaRascia](https://www.taniarascia.com/make-a-static-website-with-jekyll/#pushing-jekyll-site-to-github-pages)
+# Build for production
 
-# Run locally
-
-To run the project in local environment, use this commandd:
+Run the following command to build as production before deploying to GitHub pages
 
 ```shell
-bundle exec jekyll serve --config _config.yml,_config_dev.yml
-bundle exec jekyll build --config _config.yml,_config_dev.yml
+JEKYLL_ENV=production jekyll build
 ```
 
 <!------------------------------------------------------------------------------------------------------------->
 
-# Generate webp files with cwebp
+# Using webp files with cwebp
 
 Navigate exactly in the directory where your images are located and execute this:
 
@@ -192,3 +189,5 @@ find . -name "*.webp" -type f -delete
 -   Make one config file
 -   Html compress (minifier) added
 -   404 page moved to `_pages` folder
+-   Update `jekyll-minifier` to work
+-   Removed html compress layout
