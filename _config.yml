@@ -27,13 +27,13 @@ defaults:
           is_post: false
           layout: default
 
-# Rogue
+# Highlighter
 markdown: kramdown
 kramdown:
     input: GFM
     syntax_highlighter: rouge
 
-# Exclude files
+# Exclude Files
 exclude:
     - CHANGELOG.md
     - LICENSE.txt
@@ -43,7 +43,7 @@ exclude:
     - .DS_Store
     - .jekyll-cache
 
-# Include files
+# Include Files
 include: [_pages]
 
 # Livereload
@@ -65,7 +65,18 @@ jekyll-minifier:
     preserve_php: true
     remove_intertag_spaces: true
 
-# Image optim
+# Compress Html
+compress_html:
+    clippings: all
+    comments: ["<!-- ", " -->"]
+    endings: all
+    ignore:
+        envs: [local]
+    blanklines: false
+    profile: true
+    startings: [html, head, body]
+
+# Image Optim
 imageoptim:
     svgo: false
 
@@ -73,7 +84,7 @@ imageoptim:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-# WebP generation
+# WebP Generation
 webp:
     enabled: true
     quality: 80

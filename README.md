@@ -48,7 +48,6 @@ find . -name "*.webp" -type f -delete
 
 # Todos
 
--   Html minify (or output formatting)
 -   Javascript minification
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
@@ -191,3 +190,5 @@ find . -name "*.webp" -type f -delete
 ### v1.3.3
 
 -   Make one config file
+-   Html compress (minifier) added
+-   404 page moved to `_pages` folder
