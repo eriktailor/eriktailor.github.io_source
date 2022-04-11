@@ -33,14 +33,12 @@ jQuery(document).ready(function ($) {
     $(function () {
         var lightbox = $("#lightbox");
         lightbox.hide();
-        $(".single-post img")
-            .not(".no-lightbox")
-            .click(function () {
-                var src = $(this).attr("src");
-                $("body").addClass("lightbox-opened");
-                lightbox.fadeIn().css("display", "flex");
-                lightbox.find("img").attr("src", src);
-            });
+        $(".single-post img").click(function () {
+            var src = $(this).attr("src");
+            $("body").addClass("lightbox-opened");
+            lightbox.fadeIn().css("display", "flex");
+            lightbox.find("img").attr("src", src);
+        });
         $("#lightbox .close").click(function () {
             lightbox.fadeOut();
             $("body").removeClass("lightbox-opened");
