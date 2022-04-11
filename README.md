@@ -52,6 +52,7 @@ find . -name "*.webp" -type f -delete
 -   Javascript minification
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
+-   Make one config file
 
 <!------------------------------------------------------------------------------------------------------------->
 
