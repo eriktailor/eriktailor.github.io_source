@@ -54,8 +54,8 @@ find . -name "*.webp" -type f -delete
 -   Create info tooltip on comment form
 -   Remove lightbox from comment avatars
 -   Add check svg (or redirect to thank you) to comment response output
--   Change order of tags & comments
 -   Add recaptcha to comment form
+-   Put comment included to partials folder
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -179,3 +179,4 @@ find . -name "*.webp" -type f -delete
 -   Staticman downgraded to v2
 -   Comment reply function added
 -   Deleted sample comments
+-   Change order of tags & comments

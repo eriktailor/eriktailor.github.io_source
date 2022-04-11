@@ -21,20 +21,20 @@ layout: default
 
 <hr />
 
-<h3 id="tags">Tags</h3>
-
-<div class="tag-cloud">
-	{% for tag in page.tags %}
-		{% capture tag_name %}{{ tag }}{% endcapture %}
-		<a href="/tag/{{ tag_name }}">{{ tag }}</a>
-	{% endfor %}
-</div>
-
-<hr />
-
 <!-- Comments -->
 {% if page.comments != false %}
 	<div id="comments">
 		{% include comments.html %}
     </div>
 {% endif %}
+
+<hr />
+
+<!-- Tags -->
+<h3 id="tags">Tags</h3>
+<div class="tag-cloud">
+	{% for tag in page.tags %}
+		{% capture tag_name %}{{ tag }}{% endcapture %}
+		<a href="/tag/{{ tag_name }}">{{ tag }}</a>
+	{% endfor %}
+</div>
