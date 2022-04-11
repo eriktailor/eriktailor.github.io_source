@@ -185,3 +185,5 @@ find . -name "*.webp" -type f -delete
 ### v1.3.2
 
 -   Add check check icon svg to comment response output
+-   Add date to single posts
+-   Add read time to single posts

@@ -8,8 +8,14 @@ layout: default
 {% capture title %}{{ page.title }}{% endcapture %}
 
 {% if page.image != false %}
-	{% include components/picture.html img=source alt=title class="mb-4 featured-image" %}
+	{% include components/picture.html img=source alt=title class="featured-image mb-3" %}
 {% endif %}
+
+<div class="post-metas mb-2">
+	<time>{{ page.date | date: "%Y %B %-d." }}  / </time>
+	{% include components/read-time.html %}
+</div>
+
 
 {% if page.description %}
 	<p class="lead">{{ page.description }}</p>
