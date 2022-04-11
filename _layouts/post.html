@@ -33,42 +33,10 @@ layout: default
 <hr />
 
 <!-- Comments -->
-{% if site.data.comments[page.slug] %}
-	<h3 id="comments">
-		{% if site.data.comments[page.slug].size > 1 %}
-			{{ site.data.comments[page.slug] | size }}
-		{% endif %}
-		Comments
-    </h3>
-	{% assign comments = site.data.comments[page.slug] | sort %}
-	<ul class="comments">
-		{% for comment in comments %}
-			<li class="comment">
-				<strong>{{ comment[1].name }}</strong>
-				<time>on {{ comment[1].date | date: "%B %d, %Y" }}</time>
-				<p>{{ comment[1].message }}</p>
-			</li>
-		{% endfor %}
-	</ul>
-	<hr>
+<!-- Begin Comments -->
+{% if page.comments != false %}
+	<div id="comments">
+		{% include comments.html %}
+    </div>
 {% endif %}
-
-<!-- Comments Form -->
-<h3 id="leave-comment">Leave a comment</h3>
-<p>Comments will appear after moderation.</p>
-<form id="comment-form" method="POST" action="{{ site.staticman_url }}">
-	<input name="options[redirect]" type="hidden" value="https://eriktailor.github.io/thank-you">
-	<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-	<div class="form-row">
-		<div class="form-group">
-			<input name="fields[name]" type="text" placeholder="Name">
-		</div>
-		<div class="form-group">
-			<input name="fields[email]" type="email" placeholder="Email">
-		</div>
-	</div>
-	<div class="form-group">
-		<textarea name="fields[message]" rows="8" placeholder="Comment"></textarea>
-	</div>
-	<button class="btn" type="submit">Submit comment</button>
-</form>
+<!-- End Comments -->
