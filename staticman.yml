@@ -32,7 +32,7 @@ comments:
     # Otherwise, entries will be published to the main branch automatically.
     moderation: true
     # Name of the site. Used in notification emails.
-    name: "example.com"
+    name: "eriktailor.github.io"
     # Notification settings. When enabled, users can choose to receive notifications
     # via email when someone adds a reply or a new comment. This requires an account
     # with Mailgun, which you can get for free at http://mailgun.com.
