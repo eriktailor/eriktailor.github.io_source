@@ -52,7 +52,6 @@ find . -name "*.webp" -type f -delete
 -   Javascript minification
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
--   Make one config file
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -188,3 +187,7 @@ find . -name "*.webp" -type f -delete
 -   Add check check icon svg to comment response output
 -   Add date to single posts
 -   Add read time to single posts
+
+### v1.3.3
+
+-   Make one config file

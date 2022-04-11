@@ -5,11 +5,9 @@ description: This is my personal blog website
 author: ErikTailor
 logo: /assets/img/eriktailor_logo_dark.webp
 locale: hu
-baseurl: "/"
-url: "eriktailor.github.io"
+baseurl: ""
+url: ""
 port: 4001
-
-# -----------------------------------------------------
 
 # -----------------------------------------------------
 
@@ -18,6 +16,22 @@ markdown: kramdown
 kramdown:
     input: GFM
     syntax_highlighter: rouge
+
+# Defaults
+defaults:
+    - scope:
+          type: posts
+          path: _posts
+      values:
+          is_post: true
+          layout: post
+          permalink: /blog/:title/
+    - scope:
+          type: pages
+          path: _pages
+      values:
+          is_post: false
+          layout: default
 
 # Exclude files
 exclude:
@@ -38,7 +52,7 @@ livereload: true
 # Sass
 sass:
     sourcemap: never
-    style: compressed
+    style: expanded
 
 # Autoprefixer
 autoprefixer:
@@ -71,9 +85,6 @@ tag_page_layout: tagpage
 tag_page_dir: tag
 tag_page_data:
     sitemap: false
-
-# Staticman WORKING
-#staticman_url: https://api.staticman.net/v3/entry/github/eriktailor/eriktailor.github.io_source/master/comments
 
 # staticman comments configuration
 staticman_url: https://eriktailor-staticman-app.herokuapp.com/v2/entry/eriktailor/eriktailor.github.io_source/master/comments
