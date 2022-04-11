@@ -55,7 +55,6 @@ find . -name "*.webp" -type f -delete
 -   Remove lightbox from comment avatars
 -   Add check svg (or redirect to thank you) to comment response output
 -   Add recaptcha to comment form
--   Put comment included to partials folder
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -180,3 +179,4 @@ find . -name "*.webp" -type f -delete
 -   Comment reply function added
 -   Deleted sample comments
 -   Change order of tags & comments
+-   Put comment included to partials folder
