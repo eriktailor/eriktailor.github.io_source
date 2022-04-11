@@ -56,18 +56,3 @@ time {
         margin-bottom: 40px;
     }
 }
-
-// Comments
-.comments {
-    list-style: none;
-    .comment {
-        background-color: $white;
-        text-indent: 0;
-        padding: 20px;
-        margin-bottom: $bottom-margin;
-        border-radius: 8px;
-        p {
-            margin-bottom: 0;
-        }
-    }
-}

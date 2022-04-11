@@ -72,6 +72,13 @@ button:hover {
 //
 // Staticman existing comments
 //
+
+.comment {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
 .comment__avatar-wrapper {
     float: left;
     width: 60px;
@@ -123,8 +130,12 @@ button:hover {
     cursor: pointer;
 }
 
-.comment__body p {
-    white-space: pre-line;
+.comment__body {
+    font-size: 16px;
+    p {
+        white-space: pre-line;
+        margin-bottom: 15px;
+    }
 }
 
 .comment-form-message-footnote {
