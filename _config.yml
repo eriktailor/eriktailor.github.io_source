@@ -64,6 +64,8 @@ jekyll-minifier:
     exclude: ["sitemap.xml"]
     preserve_php: true
     remove_intertag_spaces: true
+    uglifier_args:
+        harmony: true
 
 # Compress Html
 compress_html:
