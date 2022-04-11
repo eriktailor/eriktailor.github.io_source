@@ -22,6 +22,7 @@ To run the project in local environment, use this commandd:
 
 ```
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
+bundle exec jekyll build --config _config.yml,_config_dev.yml
 ```
 
 <!------------------------------------------------------------------------------------------------------------->
