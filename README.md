@@ -49,7 +49,6 @@ find . -name "*.webp" -type f -delete
 # Todos
 
 -   Html output formatting
--   Add check svg (or redirect to thank you) to comment response output
 -   Add recaptcha to comment form
 
 <!------------------------------------------------------------------------------------------------------------->
@@ -180,3 +179,7 @@ find . -name "*.webp" -type f -delete
 -   Add a border-radius sass variable and use it
 -   Make `page.description` a lead
 -   Updated 404 & thank-you pages
+
+### v1.3.2
+
+-   Add check check icon svg to comment response output

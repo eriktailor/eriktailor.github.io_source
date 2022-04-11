@@ -3,6 +3,8 @@
 (function ($) {
     var $comments = $(".js-comments");
 
+    $("#comment-success").hide();
+
     $(".js-form").submit(function () {
         var form = this;
 
@@ -15,12 +17,13 @@
             data: $(this).serialize(),
             contentType: "application/x-www-form-urlencoded",
             success: function (data) {
-                showModal("Comment submitted", "Thanks! Your comment will appear shortly. Please reload the page in a few minutes.");
+                showModal("#comment-success");
 
                 $("#comment-form-submit").html("Submit");
 
                 $(form)[0].reset();
                 $(form).removeClass("disabled");
+                $(form).fadeOut(300);
                 //grecaptcha.reset();
             },
             error: function (err) {
@@ -39,9 +42,10 @@
         $("body").removeClass("show-modal");
     });
 
-    function showModal(title, message) {
-        $(".js-modal-title").text(title);
-        $(".js-modal-text").html(message);
+    function showModal(div) {
+        //$(".js-modal-title").text(title);
+        //$(".js-modal-text").html(message);
+        $(div).show();
         $("body").addClass("show-modal");
     }
 })(jQuery);

@@ -47,3 +47,15 @@
         margin-left: 3em;
     }
 }
+
+// Success message
+.comment-success {
+    h2 {
+        display: flex;
+    }
+    svg {
+        margin-right: 10px;
+        position: relative;
+        bottom: -2px;
+    }
+}

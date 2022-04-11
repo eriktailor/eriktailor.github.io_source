@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simple responsive lightbox with Html and jQuery
-description: In this tutorial I will show you how to create a simple responsive lightbox with Html & jQuery, without using a third-party plugin.
+description: In this tutorial I will show you how to create an easy, simple responsive lightbox with Html & jQuery, without using a third-party plugin.
 tags: html css javascript
 comments: true
 ---
