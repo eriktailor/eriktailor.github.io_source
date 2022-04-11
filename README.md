@@ -49,7 +49,6 @@ find . -name "*.webp" -type f -delete
 # Todos
 
 -   Html output formatting
--   Create border-radius sass variable
 -   Add check svg (or redirect to thank you) to comment response output
 -   Add recaptcha to comment form
 
@@ -178,3 +177,4 @@ find . -name "*.webp" -type f -delete
 -   Change order of tags & comments
 -   Put comment included to partials folder
 -   Remove lightbox from comment avatars
+-   Add a border-radius sass variable and use it

@@ -74,7 +74,7 @@ ul {
 .tag-cloud {
     a {
         background-color: $primary;
-        border-radius: 3px;
+        border-radius: $border-radius / 2;
         margin: 0 4px 6px 0;
         display: inline-block;
         padding: 0 10px;

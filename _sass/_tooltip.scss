@@ -8,32 +8,32 @@
  * http://not-only-code.github.com/Simpletooltip
  */
 .simpletooltip {
-	cursor: pointer;
+    cursor: pointer;
 }
 .simple-tooltip {
-	position: absolute;
-	display: block;
-	width: auto;
-	max-width: 200px;
-	height: auto;
-	padding: 0 6px;
-	color: #cccccc;
-	font-size: 12px;
-	border: solid 2px #111111;
-	background-color: #222222;
-	margin-bottom: 30px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 3px;
-	z-index: 9999;
-	margin-top: -10px;
-	margin-left: 2px;
+    position: absolute;
+    display: block;
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    padding: 0 6px;
+    color: #cccccc;
+    font-size: 12px;
+    border: solid 2px #111111;
+    background-color: #222222;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: $border-radius / 2;
+    z-index: 9999;
+    margin-top: -10px;
+    margin-left: 2px;
 }
 .simple-tooltip .arrow {
-	width: 0;
-	height: 0;
-	position: absolute;
-	border-width: 4px;
-	border-style: solid;
-	border-color: transparent;
-	display: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent;
+    display: none;
 }
