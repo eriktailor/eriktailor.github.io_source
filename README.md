@@ -6,10 +6,10 @@ This is my personal blog website.
 
 To deploy the project to GitHub pages, use these commands:
 
-```
+```shell
 git add .
 git commit -am "Test commit"
-git push origin gh-pages
+git push -u origin master
 ```
 
 <!------------------------------------------------------------------------------------------------------------->
@@ -20,7 +20,7 @@ Source: [TaniaRascia](https://www.taniarascia.com/make-a-static-website-with-jek
 
 To run the project in local environment, use this commandd:
 
-```
+```shell
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 bundle exec jekyll build --config _config.yml,_config_dev.yml
 ```
@@ -31,7 +31,7 @@ bundle exec jekyll build --config _config.yml,_config_dev.yml
 
 Navigate exactly in the directory where your images are located and execute this:
 
-```
+```shell
 $ for file in assets/img/posts/*
 > do
 > cwebp -q 80 "$file" -o "${file%.png}.webp"
@@ -40,7 +40,7 @@ $ for file in assets/img/posts/*
 
 ### Delete all webp files:
 
-```
+```shell
 find . -name "*.webp" -type f -delete
 ```
 
@@ -55,6 +55,7 @@ find . -name "*.webp" -type f -delete
 -   Remove lightbox from comment avatars
 -   Add check svg (or redirect to thank you) to comment response output
 -   Change order of tags & comments
+-   Add recaptcha to comment form
 
 <!------------------------------------------------------------------------------------------------------------->
 
