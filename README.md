@@ -49,6 +49,8 @@ find . -name "*.webp" -type f -delete
 
 -   Html output formatting
 -   Add comments feature with GitHub Issues API
+-   Create border-radius sass variable
+-   Create info tooltip on comment form
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -161,3 +163,8 @@ find . -name "*.webp" -type f -delete
 -   Style inline code attributes
 -   Change html code highlighting color
 -   Disqus comments function added
+
+### v1.3.0
+
+-   Disqus commenting removed
+-   Staticman comment function added
