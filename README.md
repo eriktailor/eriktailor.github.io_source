@@ -48,7 +48,8 @@ find . -name "*.webp" -type f -delete
 
 # Todos
 
--   Html output formatting
+-   Html minify (or output formatting)
+-   Javascript minification
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
 
