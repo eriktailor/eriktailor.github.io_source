@@ -49,9 +49,7 @@ find . -name "*.webp" -type f -delete
 # Todos
 
 -   Html output formatting
--   Add comments feature with GitHub Issues API
 -   Create border-radius sass variable
--   Create info tooltip on comment form
 -   Add check svg (or redirect to thank you) to comment response output
 -   Add recaptcha to comment form
 
