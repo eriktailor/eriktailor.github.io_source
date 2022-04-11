@@ -17,11 +17,11 @@ permalink: /
 <h2 id="latest-articles">Latest Articles</h2>
 
 <ul class="article-list mb-3">
-	{% for post in site.posts limit:5 %}
-	<li>
-		<a href="{{ post.url }}">{{ post.title }}</a>
-		<time>{{ post.date | date: "%b %d" }}</time>
-	</li>
+	{% for post in site.posts limit: 8 %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+			<time>{{ post.date | date: "%b %d" }}</time>
+		</li>
 	{% endfor %}
 </ul>
 

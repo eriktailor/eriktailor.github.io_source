@@ -8,6 +8,8 @@ This is my personal blogging website's source code.
 
 -   Add recaptcha to comment form
 -   Change reply-to text to icon in comments
+-   Try to add the mailer php file to site
+-   Check SEO setups
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -170,10 +172,10 @@ git push -u origin master
 
 ## Build for production
 
-Run the following command to build as production before deploying to GitHub pages
+Run the following command to serve as production:
 
 ```shell
-JEKYLL_ENV=production jekyll build
+JEKYLL_ENV=production bundle exec jekyll serve
 ```
 
 <!------------------------------------------------------------------------------------------------------------->
