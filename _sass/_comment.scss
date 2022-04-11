@@ -1,0 +1,49 @@
+// Comment styles
+.comment {
+    background: $white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: $bottom-margin;
+    .comment-header {
+        display: flex;
+        margin-bottom: 15px;
+        img {
+            width: 42px;
+            height: 42px;
+            margin: 0 15px 0 0;
+        }
+        h6 {
+            margin-bottom: -3px;
+            font-weight: bold;
+            text-transform: lowercase;
+        }
+        time {
+            font-size: 14px;
+        }
+    }
+    .comment-body {
+        font-size: 16px;
+        p {
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+        blockquote {
+            background: #f3f3f3;
+            color: #8b8b8b;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .comment-footer {
+        font-size: 14px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+        .comment__reply-link {
+            cursor: pointer;
+        }
+    }
+    &.child {
+        margin-left: 3em;
+    }
+}

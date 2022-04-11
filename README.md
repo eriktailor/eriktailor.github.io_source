@@ -52,6 +52,8 @@ find . -name "*.webp" -type f -delete
 -   Add comments feature with GitHub Issues API
 -   Create border-radius sass variable
 -   Create info tooltip on comment form
+-   Remove lightbox from comment avatars
+-   Add check svg (or redirect to thank you) to comment response output
 
 <!------------------------------------------------------------------------------------------------------------->
 
@@ -169,3 +171,8 @@ find . -name "*.webp" -type f -delete
 
 -   Disqus commenting removed
 -   Staticman comment function added
+
+### v1.3.1
+
+-   Staticman downgraded to v2
+-   Comment reply function added

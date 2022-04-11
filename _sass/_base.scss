@@ -22,14 +22,21 @@ body {
     .mb-#{$i} {
         margin-bottom: $i * 10px !important;
     }
+    .mt-#{$i} {
+        margin-top: $i * 10px !important;
+    }
 }
 
 .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .hidden-sm {
     @media (max-width: $breakpoint-sm) {
-        display: none;
+        display: none !important;
     }
+}
+
+.d-none {
+    display: none !important;
 }
