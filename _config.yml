@@ -76,7 +76,7 @@ tag_page_data:
 #staticman_url: https://api.staticman.net/v3/entry/github/eriktailor/eriktailor.github.io_source/master/comments
 
 # staticman comments configuration
-staticman_url: https://eriktailor-staticman-app.herokuapp.com/v3/entry/eriktailor/eriktailor.github.io_source/master/comments
+staticman_url: https://eriktailor-staticman-app.herokuapp.com/v2/entry/eriktailor/eriktailor.github.io_source/master/comments
 
 # Plugins
 plugins:
