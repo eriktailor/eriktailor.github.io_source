@@ -153,6 +153,8 @@ This is my personal blogging website's source code.
 -   404 page moved to `_pages` folder
 -   Update `jekyll-minifier` to work
 -   Removed html compress layout
+-   New post added
+-   Fix too big images in lightbox
 
 <!------------------------------------------------------------------------------------------------------------->
 
