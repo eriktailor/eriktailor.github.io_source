@@ -1,1 +1,492 @@
-!function(t){"use strict";var e,i=null;(e=function(t){if(t!==undefined&&"object"==typeof t&&(this.$el=t.$el||null,this.$tooltip=null,this.$arrow=null,this.margins={border:6,top:15,right:15,bottom:15,left:15},this.settings={},this.themes={},this.isJqueryObject(this.$el)&&!this.$el.data().hasOwnProperty("simpletooltipInstanced")&&(this.title=this.$el.attr("title"),this.title!==undefined&&this.title.length)))return this.$el.attr("title",""),this.setOptions(t.settings),this.setTooltip(),this.initialize(),this.$el.data("simpletooltip-instanced","1"),this}).defaults={position:"top",color:"#DDDDDD",background_color:"#222222",border_width:0,arrow_width:6,padding:{width:8,height:6},max_width:200,fade:!0},e.themes={dark:{color:"#CCCCCC",background_color:"#222222",border_color:"#111111",border_width:4},gray:{color:"#434343",background_color:"#DCDCDC",border_color:"#BABABA",border_width:4},white:{color:"#6D7988",background_color:"#CCDEF2",border_color:"#FFFFFF",border_width:4},blue:{color:"#FFFFFF",background_color:"#0088BE",border_color:"#00669C",border_width:4}},e.templates={tooltip:'<div class="simple-tooltip"></div>',arrow:'<span class="arrow">&nbsp;</span>'},e.prototype.isJqueryObject=function(t){return null!==t&&t!==undefined&&"object"==typeof t&&t.jquery!==undefined},e.prototype.setTooltip=function(){if(!this.isJqueryObject(this.$tooltip)||!this.isJqueryObject(this.$arrow))return this.$tooltip=t(e.templates.tooltip),this.$tooltip.html(this.title),this.$tooltip.addClass(this.getAttribute("position")),this.$arrow=t(e.templates.arrow),this.$tooltip.append(this.$arrow),this.$tooltip},e.prototype.setOptions=function(i){i!==undefined&&"object"==typeof i&&(this.settings=t.extend(e.defaults,i),this.settings.themes!==undefined&&"object"==typeof this.settings.themes&&(this.themes=t.extend(e.themes,this.settings.themes),delete this.settings.themes),this.themes[this.settings.theme]!==undefined&&(this.settings=t.extend(this.settings,this.themes[this.settings.theme])))},e.prototype.initialize=function(){this.$el.on("mouseenter",{that:this},this.mouseOver),this.$el.on("mouseleave",{that:this},this.mouseOut),this.$el.attr("title","")},e.prototype.getAttribute=function(t){var e,i="simpletooltip-"+t.replace("_","-");return this.$el.data(i)!==undefined?this.$el.data(i):(e=this.$el.data("simpletooltip-theme"))!==undefined&&this.themes[e]!==undefined&&this.themes[e][t]!==undefined?this.themes[e][t]:this.settings[t]!==undefined&&this.settings[t]},e.prototype.mouseOver=function(t){var e=t.data.that;return e.$tooltip.parent().length?t:(i.append(e.$tooltip),e.$tooltip.hide(),e.styleTooltip(),e.getAttribute("fade")?e.$tooltip.delay(180).fadeIn(200):e.$tooltip.show(),t)},e.prototype.mouseOut=function(t){var e=t.data.that;return e.$tooltip.parent().length?e.$tooltip.css("opacity")?(e.getAttribute("fade")?e.$tooltip.clearQueue().stop().fadeOut(100,function(){e.$tooltip.remove()}):e.$tooltip.remove(),t):(e.$tooltip.remove(),t):t},e.prototype.styleTooltip=function(){if(this.isJqueryObject(this.$el)&&this.isJqueryObject(this.$tooltip)){var e=this.$el.offset(),i=this.getAttribute("background_color"),o=this.getAttribute("border_color");this.isJqueryObject(this.$arrow)||(this.$arrow=this.$tooltip.find(" > .arrow"));var r=this.getAttribute("border_width"),s=(r=o&&"boolean"!=typeof r&&"none"!==r?Number(r):0)&&o?o:i,h=Math.round(3*this.settings.arrow_width/4),n=-parseInt(2*this.settings.arrow_width+r,10),l=-parseInt(2*h+r,10),a={maxWidth:this.getAttribute("max_width"),backgroundColor:i,color:this.getAttribute("color"),borderColor:o,borderWidth:r};switch(this.getAttribute("position")){case"top-right":e.top-=parseInt(this.$tooltip.outerHeight()+this.margins.bottom,10),e.left+=parseInt(this.$el.outerWidth()-this.margins.right-this.margins.border,10),this.$arrow.css({left:this.settings.padding.width-r,borderWidth:h,bottom:l,borderTopColor:s,borderLeftColor:s});break;case"right-top":e.top-=parseInt(this.$tooltip.outerHeight()-this.margins.bottom,10),e.left+=parseInt(this.$el.outerWidth()+this.margins.right,10),this.$arrow.css({bottom:this.settings.padding.height-r,borderWidth:h,left:l,borderRightColor:s,borderBottomColor:s});break;case"right":e.top+=parseInt((this.$el.outerHeight()-this.$tooltip.outerHeight())/2,10),e.left+=parseInt(this.$el.outerWidth()+this.margins.right,10),this.$arrow.css({left:n,borderRightColor:s,marginTop:-this.settings.arrow_width});break;case"right-bottom":e.top+=parseInt(this.$el.outerHeight()-this.margins.bottom,10),e.left+=parseInt(this.$el.outerWidth()+this.margins.right,10),this.$arrow.css({top:this.settings.padding.height-r,borderWidth:h,left:l,borderRightColor:s,borderTopColor:s});break;case"bottom-right":e.top+=parseInt(this.$el.outerHeight()+this.margins.bottom,10),e.left+=parseInt(this.$el.outerWidth()-this.margins.right-this.margins.border,10),this.$arrow.css({left:this.settings.padding.width-r,borderWidth:h,top:l,borderBottomColor:s,borderLeftColor:s});break;case"bottom":e.top+=parseInt(this.$el.outerHeight()+this.margins.bottom,10),e.left+=parseInt((this.$el.outerWidth()-this.$tooltip.outerWidth())/2,10),this.$arrow.css({top:n,marginLeft:-this.settings.arrow_width,borderBottomColor:s});break;case"bottom-left":e.top+=parseInt(this.$el.outerHeight()+this.margins.bottom,10),e.left-=parseInt(this.$tooltip.outerWidth()-this.margins.left-this.margins.border,10),this.$arrow.css({right:this.settings.padding.width-r,borderWidth:h,top:l,borderBottomColor:s,borderRightColor:s});break;case"left-bottom":e.top+=parseInt(this.$el.outerHeight()-this.margins.bottom,10),e.left-=parseInt(this.$tooltip.outerWidth()+this.margins.left,10),this.$arrow.css({top:this.settings.padding.height-r,borderWidth:h,right:l,borderLeftColor:s,borderTopColor:s});break;case"left":e.top+=parseInt((this.$el.outerHeight()-this.$tooltip.outerHeight())/2,10),e.left-=parseInt(this.$tooltip.outerWidth()+this.margins.left,10),this.$arrow.css({right:n,borderLeftColor:s,marginTop:-this.settings.arrow_width});break;case"left-top":e.top-=parseInt(this.$tooltip.outerHeight()-this.margins.bottom,10),e.left-=parseInt(this.$tooltip.outerWidth()+this.margins.left,10),this.$arrow.css({bottom:this.settings.padding.height-r,borderWidth:h,right:l,borderLeftColor:s,borderBottomColor:s});break;case"top-left":e.top-=parseInt(this.$tooltip.outerHeight()+this.margins.bottom,10),e.left-=parseInt(this.$tooltip.outerWidth()-this.margins.left,10),this.$arrow.css({right:this.settings.padding.width-r,borderWidth:h,bottom:l,borderTopColor:s,borderRightColor:s});break;default:e.top-=parseInt(this.$tooltip.outerHeight()+this.margins.top,10),e.left+=parseInt((this.$el.outerWidth()-this.$tooltip.outerWidth())/2,10),this.$arrow.css({bottom:n,borderTopColor:s,marginLeft:-this.settings.arrow_width})}this.$tooltip.css(t.extend(a,{top:e.top,left:e.left}))}},t.fn.simpletooltip=function(i){return this.each(function(){var o=t(this);if(!o.data().hasOwnProperty("simpletooltipInstanced")){var r={$el:o};i!==undefined&&"object"==typeof i&&(r.settings=i),new e(r)}})},t(window).on("load",function(){i=t("body"),t('[data-simpletooltip="init"]').each(function(){t(this).simpletooltip()})})}(jQuery);
+/**
+ * Simpletooltip is a JQuery plugin, thought to insert short tooltips to any element of your website more easily
+ * v1.3.0
+ *
+ * 2014 Carlos Sanz Garcia
+ * Distributed under GPL-3.0 license
+ *
+ * http://not-only-code.github.com/Simpletooltip
+ */
+
+(function (a) {
+	'use strict';
+	var b,
+		c = null;
+	b = function (a) {
+		if (a === undefined || typeof a !== 'object') {
+			return;
+		}
+		this.$el = a.$el || null;
+		this.$tooltip = null;
+		this.$arrow = null;
+		this.margins = {
+			border: 6,
+			top: 15,
+			right: 15,
+			bottom: 15,
+			left: 15,
+		};
+		this.settings = {};
+		this.themes = {};
+		if (
+			!this.isJqueryObject(this.$el) ||
+			this.$el
+				.data()
+				.hasOwnProperty('simpletooltipInstanced')
+		) {
+			return;
+		}
+		this.title = this.$el.attr('title');
+		if (this.title === undefined || !this.title.length) {
+			return;
+		}
+		this.$el.attr('title', '');
+		this.setOptions(a.settings);
+		this.setTooltip();
+		this.initialize();
+		this.$el.data('simpletooltip-instanced', '1');
+		return this;
+	};
+	b.defaults = {
+		position: 'top',
+		color: '#DDDDDD',
+		background_color: '#222222',
+		border_width: 0,
+		arrow_width: 6,
+		padding: {
+			width: 8,
+			height: 6,
+		},
+		max_width: 200,
+		fade: true,
+	};
+	b.themes = {
+		dark: {
+			color: '#CCCCCC',
+			background_color: '#222222',
+			border_color: '#111111',
+			border_width: 4,
+		},
+		gray: {
+			color: '#434343',
+			background_color: '#DCDCDC',
+			border_color: '#BABABA',
+			border_width: 4,
+		},
+		white: {
+			color: '#6D7988',
+			background_color: '#CCDEF2',
+			border_color: '#FFFFFF',
+			border_width: 4,
+		},
+		blue: {
+			color: '#FFFFFF',
+			background_color: '#0088BE',
+			border_color: '#00669C',
+			border_width: 4,
+		},
+	};
+	b.templates = {
+		tooltip: '<div class="simple-tooltip"></div>',
+		arrow: '<span class="arrow">&nbsp;</span>',
+	};
+	b.prototype.isJqueryObject = function (a) {
+		return (
+			a !== null &&
+			a !== undefined &&
+			typeof a === 'object' &&
+			a.jquery !== undefined
+		);
+	};
+	b.prototype.setTooltip = function () {
+		if (
+			this.isJqueryObject(this.$tooltip) &&
+			this.isJqueryObject(this.$arrow)
+		) {
+			return;
+		}
+		this.$tooltip = a(b.templates.tooltip);
+		this.$tooltip.html(this.title);
+		this.$tooltip.addClass(this.getAttribute('position'));
+		this.$arrow = a(b.templates.arrow);
+		this.$tooltip.append(this.$arrow);
+		return this.$tooltip;
+	};
+	b.prototype.setOptions = function (c) {
+		if (c === undefined || typeof c !== 'object') {
+			return;
+		}
+		this.settings = a.extend(b.defaults, c);
+		if (
+			this.settings['themes'] !== undefined &&
+			typeof this.settings.themes === 'object'
+		) {
+			this.themes = a.extend(
+				b.themes,
+				this.settings.themes
+			);
+			delete this.settings.themes;
+		}
+		if (this.themes[this.settings.theme] !== undefined) {
+			this.settings = a.extend(
+				this.settings,
+				this.themes[this.settings.theme]
+			);
+		}
+	};
+	b.prototype.initialize = function () {
+		this.$el.on(
+			'mouseenter',
+			{
+				that: this,
+			},
+			this.mouseOver
+		);
+		this.$el.on(
+			'mouseleave',
+			{
+				that: this,
+			},
+			this.mouseOut
+		);
+		this.$el.attr('title', '');
+	};
+	b.prototype.getAttribute = function (a) {
+		var b = 'simpletooltip-' + a.replace('_', '-'),
+			c;
+		if (this.$el.data(b) !== undefined) {
+			return this.$el.data(b);
+		}
+		if (
+			(c = this.$el.data('simpletooltip-theme')) !==
+			undefined
+		) {
+			if (
+				this.themes[c] !== undefined &&
+				this.themes[c][a] !== undefined
+			) {
+				return this.themes[c][a];
+			}
+		}
+		if (this.settings[a] !== undefined) {
+			return this.settings[a];
+		}
+		return false;
+	};
+	b.prototype.mouseOver = function (a) {
+		var b = a.data.that;
+		if (b.$tooltip.parent().length) {
+			return a;
+		}
+		c.append(b.$tooltip);
+		b.$tooltip.hide();
+		b.styleTooltip();
+		if (b.getAttribute('fade')) {
+			b.$tooltip.delay(180).fadeIn(200);
+		} else {
+			b.$tooltip.show();
+		}
+		return a;
+	};
+	b.prototype.mouseOut = function (a) {
+		var b = a.data.that;
+		if (!b.$tooltip.parent().length) {
+			return a;
+		}
+		if (!b.$tooltip.css('opacity')) {
+			b.$tooltip.remove();
+			return a;
+		}
+		if (b.getAttribute('fade')) {
+			b.$tooltip
+				.clearQueue()
+				.stop()
+				.fadeOut(100, function () {
+					b.$tooltip.remove();
+				});
+		} else {
+			b.$tooltip.remove();
+		}
+		return a;
+	};
+	b.prototype.styleTooltip = function () {
+		if (
+			!this.isJqueryObject(this.$el) ||
+			!this.isJqueryObject(this.$tooltip)
+		) {
+			return;
+		}
+		var b = this.$el.offset(),
+			c = this.getAttribute('background_color'),
+			d = this.getAttribute('border_color');
+		if (!this.isJqueryObject(this.$arrow)) {
+			this.$arrow = this.$tooltip.find(' > .arrow');
+		}
+		var e = this.getAttribute('border_width');
+		e =
+			!d || typeof e === 'boolean' || e === 'none'
+				? 0
+				: Number(e);
+		var f = !e || !d ? c : d;
+		var g = Math.round((this.settings.arrow_width * 3) / 4),
+			h = -parseInt(this.settings.arrow_width * 2 + e, 10),
+			i = -parseInt(g * 2 + e, 10);
+		var j = {
+			maxWidth: this.getAttribute('max_width'),
+			backgroundColor: c,
+			color: this.getAttribute('color'),
+			borderColor: d,
+			borderWidth: e,
+		};
+		switch (this.getAttribute('position')) {
+			case 'top-right':
+				b.top -= parseInt(
+					this.$tooltip.outerHeight() + this.margins.bottom,
+					10
+				);
+				b.left += parseInt(
+					this.$el.outerWidth() -
+						this.margins.right -
+						this.margins.border,
+					10
+				);
+				this.$arrow.css({
+					left: this.settings.padding.width - e,
+					borderWidth: g,
+					bottom: i,
+					borderTopColor: f,
+					borderLeftColor: f,
+				});
+				break;
+
+			case 'right-top':
+				b.top -= parseInt(
+					this.$tooltip.outerHeight() - this.margins.bottom,
+					10
+				);
+				b.left += parseInt(
+					this.$el.outerWidth() + this.margins.right,
+					10
+				);
+				this.$arrow.css({
+					bottom: this.settings.padding.height - e,
+					borderWidth: g,
+					left: i,
+					borderRightColor: f,
+					borderBottomColor: f,
+				});
+				break;
+
+			case 'right':
+				b.top += parseInt(
+					(this.$el.outerHeight() -
+						this.$tooltip.outerHeight()) /
+						2,
+					10
+				);
+				b.left += parseInt(
+					this.$el.outerWidth() + this.margins.right,
+					10
+				);
+				this.$arrow.css({
+					left: h,
+					borderRightColor: f,
+					marginTop: -this.settings.arrow_width,
+				});
+				break;
+
+			case 'right-bottom':
+				b.top += parseInt(
+					this.$el.outerHeight() - this.margins.bottom,
+					10
+				);
+				b.left += parseInt(
+					this.$el.outerWidth() + this.margins.right,
+					10
+				);
+				this.$arrow.css({
+					top: this.settings.padding.height - e,
+					borderWidth: g,
+					left: i,
+					borderRightColor: f,
+					borderTopColor: f,
+				});
+				break;
+
+			case 'bottom-right':
+				b.top += parseInt(
+					this.$el.outerHeight() + this.margins.bottom,
+					10
+				);
+				b.left += parseInt(
+					this.$el.outerWidth() -
+						this.margins.right -
+						this.margins.border,
+					10
+				);
+				this.$arrow.css({
+					left: this.settings.padding.width - e,
+					borderWidth: g,
+					top: i,
+					borderBottomColor: f,
+					borderLeftColor: f,
+				});
+				break;
+
+			case 'bottom':
+				b.top += parseInt(
+					this.$el.outerHeight() + this.margins.bottom,
+					10
+				);
+				b.left += parseInt(
+					(this.$el.outerWidth() -
+						this.$tooltip.outerWidth()) /
+						2,
+					10
+				);
+				this.$arrow.css({
+					top: h,
+					marginLeft: -this.settings.arrow_width,
+					borderBottomColor: f,
+				});
+				break;
+
+			case 'bottom-left':
+				b.top += parseInt(
+					this.$el.outerHeight() + this.margins.bottom,
+					10
+				);
+				b.left -= parseInt(
+					this.$tooltip.outerWidth() -
+						this.margins.left -
+						this.margins.border,
+					10
+				);
+				this.$arrow.css({
+					right: this.settings.padding.width - e,
+					borderWidth: g,
+					top: i,
+					borderBottomColor: f,
+					borderRightColor: f,
+				});
+				break;
+
+			case 'left-bottom':
+				b.top += parseInt(
+					this.$el.outerHeight() - this.margins.bottom,
+					10
+				);
+				b.left -= parseInt(
+					this.$tooltip.outerWidth() + this.margins.left,
+					10
+				);
+				this.$arrow.css({
+					top: this.settings.padding.height - e,
+					borderWidth: g,
+					right: i,
+					borderLeftColor: f,
+					borderTopColor: f,
+				});
+				break;
+
+			case 'left':
+				b.top += parseInt(
+					(this.$el.outerHeight() -
+						this.$tooltip.outerHeight()) /
+						2,
+					10
+				);
+				b.left -= parseInt(
+					this.$tooltip.outerWidth() + this.margins.left,
+					10
+				);
+				this.$arrow.css({
+					right: h,
+					borderLeftColor: f,
+					marginTop: -this.settings.arrow_width,
+				});
+				break;
+
+			case 'left-top':
+				b.top -= parseInt(
+					this.$tooltip.outerHeight() - this.margins.bottom,
+					10
+				);
+				b.left -= parseInt(
+					this.$tooltip.outerWidth() + this.margins.left,
+					10
+				);
+				this.$arrow.css({
+					bottom: this.settings.padding.height - e,
+					borderWidth: g,
+					right: i,
+					borderLeftColor: f,
+					borderBottomColor: f,
+				});
+				break;
+
+			case 'top-left':
+				b.top -= parseInt(
+					this.$tooltip.outerHeight() + this.margins.bottom,
+					10
+				);
+				b.left -= parseInt(
+					this.$tooltip.outerWidth() - this.margins.left,
+					10
+				);
+				this.$arrow.css({
+					right: this.settings.padding.width - e,
+					borderWidth: g,
+					bottom: i,
+					borderTopColor: f,
+					borderRightColor: f,
+				});
+				break;
+
+			default:
+				b.top -= parseInt(
+					this.$tooltip.outerHeight() + this.margins.top,
+					10
+				);
+				b.left += parseInt(
+					(this.$el.outerWidth() -
+						this.$tooltip.outerWidth()) /
+						2,
+					10
+				);
+				this.$arrow.css({
+					bottom: h,
+					borderTopColor: f,
+					marginLeft: -this.settings.arrow_width,
+				});
+		}
+		this.$tooltip.css(
+			a.extend(j, {
+				top: b.top,
+				left: b.left,
+			})
+		);
+	};
+	a.fn.simpletooltip = function (c) {
+		return this.each(function () {
+			var d = a(this);
+			if (
+				!d.data().hasOwnProperty('simpletooltipInstanced')
+			) {
+				var e = {
+					$el: d,
+				};
+				if (c !== undefined && typeof c === 'object') {
+					e.settings = c;
+				}
+				new b(e);
+			}
+		});
+	};
+	a(window).on('load', function () {
+		c = a('body');
+		a('[data-simpletooltip="init"]').each(function () {
+			a(this).simpletooltip();
+		});
+	});
+})(jQuery);

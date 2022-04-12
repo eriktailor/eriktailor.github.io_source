@@ -1,1 +1,12 @@
-function preventDefault(e){e.preventDefault()}document.body.addEventListener("touchmove",preventDefault,{passive:!1}),window.addEventListener("load",function(){$("#loader").fadeOut(700),document.body.removeEventListener("touchmove",preventDefault,{passive:!1})});
+// Page loader animation
+document.body.addEventListener("touchmove", preventDefault, { passive: false });
+window.addEventListener("load", function () {
+	//document.getElementById("loader").style.display = "none";
+	$("#loader").fadeOut(700);
+	document.body.removeEventListener("touchmove", preventDefault, {
+		passive: false,
+	});
+});
+function preventDefault(e) {
+	e.preventDefault();
+}
