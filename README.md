@@ -7,6 +7,7 @@ This is my personal blogging website's source code.
 # Todos
 
 -   Add recaptcha to comment form
+-   Make comments work on live site (not not publish immediately)
 -   Change reply-to text to icon in comments
 -   Try to add the mailer php file to site
 -   Check SEO setups
