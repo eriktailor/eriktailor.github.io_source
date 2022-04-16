@@ -2,7 +2,7 @@
 layout: post
 title: Connect to localhost on iPhone
 description: In this tutorial I will show you how to live connect to your local site from an iphone with MAMP, WordPress and Jekyll.
-tags: mamp wosrdpress jekyll
+tags: mamp wordpress jekyll
 ---
 
 ## Preparations
