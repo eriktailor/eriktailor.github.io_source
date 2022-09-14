@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create dark mode switch in Laravel 8
-description: In this tutorial I will show you how to create a light / dark mode switch as a new setting based on the user's choice from scratch. The value of the setting will be saved in the database, so if the user signs out, the setting will remain in the future logins. So let's begin!
+description: In this tutorial I will show you how to create a light / dark mode switch as a new setting based on the user's choice from scratch. The value of the setting will be saved in the database, so if the user signs out, the setting will remain in the future logins.
 tags: laravel node
 ---
 
@@ -40,7 +40,7 @@ DB_PASSWORD=your_database_password
 
 Let's create the database tables, so open `database/migrations/create_users_table.php` file and add a line in the `up()` function to create a table for the dark mode. The final file looks like this:
 
-```shell
+```php
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -92,7 +92,7 @@ php artisan migrate
 
 In this step, you need to create a route for displaying the home page, and an other one for saving the data, so open `routes/web.php` file and add the following routes replacing others:
 
-```shell
+```php
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -127,7 +127,7 @@ php artisan make:controller UserController
 
 Then open your newly created controller a `app/Http/Controllers/UserController.php` and add a new function between the main brackets, so the final file looks like this:
 
-```shell
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -159,7 +159,7 @@ class UserController extends Controller
 
 In the last step, let’s create a new view at `resources/views/index.blade.php` for the layout, what will contain the front-end view of the app. We will use a basic bootstrap sample layout to present the dark / light functionality. Add the following content to the file:
 
-```shell
+```html
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 

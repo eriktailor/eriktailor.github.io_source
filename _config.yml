@@ -83,7 +83,7 @@ imageoptim:
     svgo: false
 
 # Pagination
-paginate: 5
+paginate: 9
 paginate_path: "/blog/page:num/"
 
 # WebP Generation
