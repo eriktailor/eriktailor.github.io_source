@@ -12,6 +12,16 @@
   
     {
 
+      "title"    : "Create dark mode switch in Laravel 8",
+      "url"      : "/blog/create-dark-mode-switch-in-laravel-8/",
+      "category" : "",
+      "tags"     : "laravel, node",
+      "date"     : "Sep 14"
+
+    } ,
+  
+    {
+
       "title"    : "Easy gallery lightbox with jQuery",
       "url"      : "/blog/easy-gallery-lightbox-with-jquery/",
       "category" : "",
