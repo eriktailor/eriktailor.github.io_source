@@ -1,12 +1,26 @@
 <header>
 	<div class="container">
-		<a class="site-brand" href="/">
-			<img src="/assets/img/eriktailor_logo_dark.png" />
-		</a>
-		<nav>
-			{% for item in site.data.navigation %}
-			<a href="{{ item.url }}">{{ item.text }}</a>
-			{% endfor %}
-		</nav>
+		<div class="site-nav">
+			<a class="site-brand" href="/">
+				<img src="/assets/img/eriktailor_logo_dark.png" />
+			</a>
+			<nav>
+				{% for item in site.data.navigation %}
+					<a href="{{ item.url }}">{{ item.text }}</a>
+				{% endfor %}
+			</nav>
+		</div>
+		
+		<div class="night-switch">
+			<input class="switch" type="checkbox" id="switch">
+			<label class="switch-label" for="switch">Dark</label>
+		</div>
+		
+		<!--
+		<div>
+			<button class="dark-button">Dark <i class="zmdi zmdi-brightness-2 zmdi-hc-fw"></i> </button>
+			<button class="light-button" hidden="hidden">Light <i class="zmdi zmdi-sun zmdi-hc-fw"></i></button>
+		</div>
+		-->
 	</div>
 </header>

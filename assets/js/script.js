@@ -45,5 +45,25 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    // Night mode switch
+    $(function(){
+        var mode = localStorage.getItem('mode');
+        if (mode) {
+            $('body').addClass(mode);
+        }
+        $('#switch').on('change', function() {
+            if(this.checked) {
+                $("body").addClass('night');
+                $(this).prop('checked', true);
+                localStorage.setItem('mode', 'night');
+            } else {
+                $("body").removeClass('night');
+                $(this).prop('checked', false);
+                localStorage.setItem('mode', null);
+            }
+        });
+    });
+
+
     // ---------------------------------------------------
 });

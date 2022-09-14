@@ -66,18 +66,32 @@
 		
 		<header>
 	<div class="container">
-		<a class="site-brand" href="/">
-			<img src="/assets/img/eriktailor_logo_dark.png" />
-		</a>
-		<nav>
-			
-			<a href="/">Home</a>
-			
-			<a href="/blog/">Blog</a>
-			
-			<a href="/contact.html">Contact</a>
-			
-		</nav>
+		<div class="site-nav">
+			<a class="site-brand" href="/">
+				<img src="/assets/img/eriktailor_logo_dark.png" />
+			</a>
+			<nav>
+				
+					<a href="/">Home</a>
+				
+					<a href="/blog/">Blog</a>
+				
+					<a href="/contact.html">Contact</a>
+				
+			</nav>
+		</div>
+		
+		<div class="night-switch">
+			<input class="switch" type="checkbox" id="switch">
+			<label class="switch-label" for="switch">Dark</label>
+		</div>
+		
+		<!--
+		<div>
+			<button class="dark-button">Dark <i class="zmdi zmdi-brightness-2 zmdi-hc-fw"></i> </button>
+			<button class="light-button" hidden="hidden">Light <i class="zmdi zmdi-sun zmdi-hc-fw"></i></button>
+		</div>
+		-->
 	</div>
 </header>
 
@@ -362,9 +376,11 @@
 
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 <script src="/assets/js/loader.js"></script>
 <script src="/assets/js/copycode.js"></script>
 <script src="/assets/js/tooltip.js"></script>
+<script src="/assets/js/darkmode.js"></script>
 
 <script src="/assets/js/script.js"></script>
 
