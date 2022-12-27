@@ -2,6 +2,26 @@
   
     {
 
+      "title"    : "Image upload in Laravel 8",
+      "url"      : "/blog/image-upload-in-laravel-8/",
+      "category" : "",
+      "tags"     : "laravel",
+      "date"     : "Dec 27"
+
+    } ,
+  
+    {
+
+      "title"    : "Display data in ajax modal with Laravel",
+      "url"      : "/blog/display-data-in-ajax-modal-with-laravel/",
+      "category" : "",
+      "tags"     : "laravel",
+      "date"     : "Dec 27"
+
+    } ,
+  
+    {
+
       "title"    : "Ajax form submission in Laravel",
       "url"      : "/blog/ajax-form-submission-in-laravel/",
       "category" : "",
