@@ -100,5 +100,4 @@ DEPENDENCIES
   jekyll-webp
   webrick (~> 1.7)
 
-BUNDLED WITH
-   2.3.10
+
