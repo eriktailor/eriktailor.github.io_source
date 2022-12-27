@@ -26,24 +26,7 @@ jQuery(document).ready(function ($) {
     $(document.links)
         .filter(function () {
             return this.hostname != window.location.hostname;
-        })
-        .attr("target", "_blank");
-
-    // Create a lightbox for post images
-    $(function () {
-        var lightbox = $("#lightbox");
-        lightbox.hide();
-        $(".single-post img").click(function () {
-            var src = $(this).attr("src");
-            $("body").addClass("lightbox-opened");
-            lightbox.fadeIn().css("display", "flex");
-            lightbox.find("img").attr("src", src);
-        });
-        $("#lightbox .close").click(function () {
-            lightbox.fadeOut();
-            $("body").removeClass("lightbox-opened");
-        });
-    });
+        }).attr("target", "_blank");
 
     // Night mode switch
     $(function(){
@@ -63,6 +46,9 @@ jQuery(document).ready(function ($) {
             }
         });
     });
+
+    // medium like image zoom effect
+    mediumZoom('img');
 
 
     // ---------------------------------------------------
