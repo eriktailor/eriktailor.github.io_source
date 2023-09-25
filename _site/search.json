@@ -2,6 +2,16 @@
   
     {
 
+      "title"    : "Bootstrap Documentation Template",
+      "url"      : "/blog/bootstrap-documentation-template/",
+      "category" : "",
+      "tags"     : "bootstrap, html, sass, css, jquery",
+      "date"     : "Sep 25"
+
+    } ,
+  
+    {
+
       "title"    : "Image upload in Laravel 8",
       "url"      : "/blog/image-upload-in-laravel-8/",
       "category" : "",
